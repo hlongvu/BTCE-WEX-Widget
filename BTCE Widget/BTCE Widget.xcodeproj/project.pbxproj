@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
+		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
+		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
+		FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB621E7A795B006FF017 /* Assets.xcassets */; };
+		FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */; };
+		FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
+		FDF1DB711E7A79A2006FF017 /* TradePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */; };
+		FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDF1DB601E7A795B006FF017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDF1DB621E7A795B006FF017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDF1DB651E7A795B006FF017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDF1DB671E7A795B006FF017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDF1DB6E1E7A79A2006FF017 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradePair.swift; sourceTree = "<group>"; };
+		FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDF1DB551E7A795B006FF017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDF1DB4F1E7A795B006FF017 = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB5A1E7A795B006FF017 /* BTCE Widget */,
+				FDF1DB591E7A795B006FF017 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDF1DB591E7A795B006FF017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB581E7A795B006FF017 /* BTCE Widget.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDF1DB5A1E7A795B006FF017 /* BTCE Widget */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB721E7A79EF006FF017 /* utils */,
+				FDF1DB6D1E7A79A2006FF017 /* data */,
+				FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */,
+				FDF1DB5D1E7A795B006FF017 /* ViewController.swift */,
+				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
+				FDF1DB621E7A795B006FF017 /* Assets.xcassets */,
+				FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */,
+				FDF1DB671E7A795B006FF017 /* Info.plist */,
+			);
+			path = "BTCE Widget";
+			sourceTree = "<group>";
+		};
+		FDF1DB6D1E7A79A2006FF017 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB6E1E7A79A2006FF017 /* Currency.swift */,
+				FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		FDF1DB721E7A79EF006FF017 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDF1DB571E7A795B006FF017 /* BTCE Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF1DB6A1E7A795B006FF017 /* Build configuration list for PBXNativeTarget "BTCE Widget" */;
+			buildPhases = (
+				FDF1DB541E7A795B006FF017 /* Sources */,
+				FDF1DB551E7A795B006FF017 /* Frameworks */,
+				FDF1DB561E7A795B006FF017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTCE Widget";
+			productName = "BTCE Widget";
+			productReference = FDF1DB581E7A795B006FF017 /* BTCE Widget.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDF1DB501E7A795B006FF017 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Long Vu";
+				TargetAttributes = {
+					FDF1DB571E7A795B006FF017 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FDF1DB531E7A795B006FF017 /* Build configuration list for PBXProject "BTCE Widget" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDF1DB4F1E7A795B006FF017;
+			productRefGroup = FDF1DB591E7A795B006FF017 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDF1DB571E7A795B006FF017 /* BTCE Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDF1DB561E7A795B006FF017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */,
+				FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */,
+				FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDF1DB541E7A795B006FF017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
+				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
+				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
+				FDF1DB711E7A79A2006FF017 /* TradePair.swift in Sources */,
+				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FDF1DB5F1E7A795B006FF017 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDF1DB601E7A795B006FF017 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDF1DB651E7A795B006FF017 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDF1DB681E7A795B006FF017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDF1DB691E7A795B006FF017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDF1DB6B1E7A795B006FF017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BTCE Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FDF1DB6C1E7A795B006FF017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BTCE Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDF1DB531E7A795B006FF017 /* Build configuration list for PBXProject "BTCE Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF1DB681E7A795B006FF017 /* Debug */,
+				FDF1DB691E7A795B006FF017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF1DB6A1E7A795B006FF017 /* Build configuration list for PBXNativeTarget "BTCE Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF1DB6B1E7A795B006FF017 /* Debug */,
+				FDF1DB6C1E7A795B006FF017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDF1DB501E7A795B006FF017 /* Project object */;
+}
