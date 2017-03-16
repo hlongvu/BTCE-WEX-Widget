@@ -13,8 +13,8 @@
 		FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB621E7A795B006FF017 /* Assets.xcassets */; };
 		FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */; };
 		FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
-		FDF1DB711E7A79A2006FF017 /* TradePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */; };
 		FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */; };
+		FDF454401E7ADBB30020D551 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +26,8 @@
 		FDF1DB651E7A795B006FF017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDF1DB671E7A795B006FF017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF1DB6E1E7A79A2006FF017 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradePair.swift; sourceTree = "<group>"; };
 		FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FDF4543F1E7ADBB30020D551 /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF1DB6E1E7A79A2006FF017 /* Currency.swift */,
-				FDF1DB6F1E7A79A2006FF017 /* TradePair.swift */,
+				FDF4543F1E7ADBB30020D551 /* Pair.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
-				FDF1DB711E7A79A2006FF017 /* TradePair.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
+				FDF454401E7ADBB30020D551 /* Pair.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +327,7 @@
 				FDF1DB6C1E7A795B006FF017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

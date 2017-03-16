@@ -24,7 +24,7 @@ class Currency: NSObject {
     }
     class func toMyCodeTitle(index: Int) -> String{
 //        return Codes.myCodes[index].stringByReplacingOccurrencesOfString("_", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).uppercaseString
-        return Codes.allCodes[index].replacingOccurrences(of: "_", with: "", options: .literal, range: nil).uppercased()
+        return Codes.myCodes[index].replacingOccurrences(of: "_", with: "", options: .literal, range: nil).uppercased()
     }
 
     /// Default value -> first code
