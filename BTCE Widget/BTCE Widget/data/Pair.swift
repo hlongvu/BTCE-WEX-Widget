@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Pair{
-    var code:String = ""
+class Pair : Mappable {    
+//    var code:String = ""
     
     var high: Double?
     var low: Double?
@@ -20,5 +21,24 @@ class Pair{
     var buy: Double?
     var sell: Double?
     var updated: Date?
+    
+    
+    required init?(map: Map) {
+        
+    }
+    
+    // Mappable
+    func mapping(map: Map) {
+        high <- map["high"]
+        low <- map["low"]
+        avg <- map["avg"]
+        vol <- map["vol"]
+        
+        vol_cur <- map["vol_cur"]
+        last <- map["last"]
+        buy <- map["buy"]
+        sell <- map["sell"]
+        updated <- map["updated"]
+    }
     
 }
