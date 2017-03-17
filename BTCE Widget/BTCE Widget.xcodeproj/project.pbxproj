@@ -10,6 +10,19 @@
 		FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5A11E7B917C00B1DDCD /* PairCell.swift */; };
 		FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5A31E7B918B00B1DDCD /* PairCell.xib */; };
 		FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */; };
+		FD01C5AD1E7BC9BB00B1DDCD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD01C5AC1E7BC9BB00B1DDCD /* NotificationCenter.framework */; };
+		FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */; };
+		FD01C5B31E7BC9BB00B1DDCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5B11E7BC9BB00B1DDCD /* MainInterface.storyboard */; };
+		FD01C5B81E7BC9BB00B1DDCD /* BTCE Price Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD01C5AB1E7BC9BB00B1DDCD /* BTCE Price Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FD01C5BC1E7BCA2400B1DDCD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454441E7ADED70020D551 /* ObjectMapper.framework */; };
+		FD01C5BD1E7BCA2600B1DDCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454421E7ADED70020D551 /* Alamofire.framework */; };
+		FD01C5BE1E7BCA2900B1DDCD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */; };
+		FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4544F1E7ADF480020D551 /* ApiHelper.swift */; };
+		FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */; };
+		FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
+		FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
+		FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
+		FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */; };
 		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
 		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
 		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
@@ -28,7 +41,28 @@
 		FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FD01C5B51E7BC9BB00B1DDCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDF1DB501E7A795B006FF017 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD01C5AA1E7BC9BB00B1DDCD;
+			remoteInfo = "BTCE Price Widget";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		FD01C5B71E7BC9BB00B1DDCD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FD01C5B81E7BC9BB00B1DDCD /* BTCE Price Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDF4544E1E7ADEDD0020D551 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,6 +82,12 @@
 		FD01C5A11E7B917C00B1DDCD /* PairCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairCell.swift; path = views/PairCell.swift; sourceTree = "<group>"; };
 		FD01C5A31E7B918B00B1DDCD /* PairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PairCell.xib; path = views/PairCell.xib; sourceTree = "<group>"; };
 		FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTradePairVC.swift; sourceTree = "<group>"; };
+		FD01C5AB1E7BC9BB00B1DDCD /* BTCE Price Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BTCE Price Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD01C5AC1E7BC9BB00B1DDCD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FD01C5B21E7BC9BB00B1DDCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
 		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +106,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FD01C5A81E7BC9BB00B1DDCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01C5AD1E7BC9BB00B1DDCD /* NotificationCenter.framework in Frameworks */,
+				FD01C5BC1E7BCA2400B1DDCD /* ObjectMapper.framework in Frameworks */,
+				FD01C5BD1E7BCA2600B1DDCD /* Alamofire.framework in Frameworks */,
+				FD01C5BE1E7BCA2900B1DDCD /* AlamofireObjectMapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDF1DB551E7A795B006FF017 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,10 +139,22 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		FD01C5AE1E7BC9BB00B1DDCD /* BTCE Price Widget */ = {
+			isa = PBXGroup;
+			children = (
+				FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */,
+				FD01C5B11E7BC9BB00B1DDCD /* MainInterface.storyboard */,
+				FD01C5B41E7BC9BB00B1DDCD /* Info.plist */,
+				FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */,
+			);
+			path = "BTCE Price Widget";
+			sourceTree = "<group>";
+		};
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
 				FDF1DB5A1E7A795B006FF017 /* BTCE Widget */,
+				FD01C5AE1E7BC9BB00B1DDCD /* BTCE Price Widget */,
 				FDF1DB591E7A795B006FF017 /* Products */,
 				FDF454411E7ADED60020D551 /* Frameworks */,
 			);
@@ -101,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF1DB581E7A795B006FF017 /* BTCE Widget.app */,
+				FD01C5AB1E7BC9BB00B1DDCD /* BTCE Price Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +211,7 @@
 				FDF454421E7ADED70020D551 /* Alamofire.framework */,
 				FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */,
 				FDF454441E7ADED70020D551 /* ObjectMapper.framework */,
+				FD01C5AC1E7BC9BB00B1DDCD /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -154,6 +219,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FD01C5AA1E7BC9BB00B1DDCD /* BTCE Price Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD01C5BB1E7BC9BB00B1DDCD /* Build configuration list for PBXNativeTarget "BTCE Price Widget" */;
+			buildPhases = (
+				FD01C5A71E7BC9BB00B1DDCD /* Sources */,
+				FD01C5A81E7BC9BB00B1DDCD /* Frameworks */,
+				FD01C5A91E7BC9BB00B1DDCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTCE Price Widget";
+			productName = "BTCE Price Widget";
+			productReference = FD01C5AB1E7BC9BB00B1DDCD /* BTCE Price Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FDF1DB571E7A795B006FF017 /* BTCE Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF1DB6A1E7A795B006FF017 /* Build configuration list for PBXNativeTarget "BTCE Widget" */;
@@ -162,10 +244,12 @@
 				FDF1DB551E7A795B006FF017 /* Frameworks */,
 				FDF1DB561E7A795B006FF017 /* Resources */,
 				FDF4544E1E7ADEDD0020D551 /* Embed Frameworks */,
+				FD01C5B71E7BC9BB00B1DDCD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FD01C5B61E7BC9BB00B1DDCD /* PBXTargetDependency */,
 			);
 			name = "BTCE Widget";
 			productName = "BTCE Widget";
@@ -182,6 +266,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Long Vu";
 				TargetAttributes = {
+					FD01C5AA1E7BC9BB00B1DDCD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					FDF1DB571E7A795B006FF017 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -202,11 +290,20 @@
 			projectRoot = "";
 			targets = (
 				FDF1DB571E7A795B006FF017 /* BTCE Widget */,
+				FD01C5AA1E7BC9BB00B1DDCD /* BTCE Price Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FD01C5A91E7BC9BB00B1DDCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01C5B31E7BC9BB00B1DDCD /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDF1DB561E7A795B006FF017 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +318,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FD01C5A71E7BC9BB00B1DDCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */,
+				FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */,
+				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
+				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,
+				FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */,
+				FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */,
+				FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FDF1DB541E7A795B006FF017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,7 +350,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FD01C5B61E7BC9BB00B1DDCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FD01C5AA1E7BC9BB00B1DDCD /* BTCE Price Widget */;
+			targetProxy = FD01C5B51E7BC9BB00B1DDCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		FD01C5B11E7BC9BB00B1DDCD /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD01C5B21E7BC9BB00B1DDCD /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		FDF1DB5F1E7A795B006FF017 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -259,6 +386,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FD01C5B91E7BC9BB00B1DDCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "BTCE Price Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget.BTCE-Price-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FD01C5BA1E7BC9BB00B1DDCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "BTCE Price Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget.BTCE-Price-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		FDF1DB681E7A795B006FF017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +514,7 @@
 		FDF1DB6B1E7A795B006FF017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -371,6 +531,7 @@
 		FDF1DB6C1E7A795B006FF017 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +548,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FD01C5BB1E7BC9BB00B1DDCD /* Build configuration list for PBXNativeTarget "BTCE Price Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD01C5B91E7BC9BB00B1DDCD /* Debug */,
+				FD01C5BA1E7BC9BB00B1DDCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FDF1DB531E7A795B006FF017 /* Build configuration list for PBXProject "BTCE Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -75,7 +75,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="7GQ-SJ-B9t" kind="show" id="ndL-RV-ygi"/>
+                                            <segue destination="7GQ-SJ-B9t" kind="show" identifier="ChooseTradePair" id="ndL-RV-ygi"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="T57-qZ-wbj" style="IBUITableViewCellStyleDefault" id="3ja-jF-fWb">

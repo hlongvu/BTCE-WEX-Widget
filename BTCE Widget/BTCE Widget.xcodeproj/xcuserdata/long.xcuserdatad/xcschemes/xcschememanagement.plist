@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BTCE Price Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>BTCE Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>FD01C5AA1E7BC9BB00B1DDCD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>FDF1DB571E7A795B006FF017</key>
 		<dict>
 			<key>primary</key>

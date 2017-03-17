@@ -14,12 +14,19 @@ class Currency: NSObject {
         static let allCodes = ["btc_usd","btc_rur","btc_eur","ltc_btc","ltc_usd","ltc_rur","ltc_eur","nmc_btc","nmc_usd","nvc_btc","nvc_usd","usd_rur","eur_usd","eur_rur","ppc_btc","ppc_usd","dsh_btc","dsh_usd","dsh_rur","dsh_eur","dsh_ltc","dsh_eth","eth_btc","eth_usd","eth_eur","eth_ltc","eth_rur"]
         
         static let CODES_KEY = "CODES"
-        static let WIDGET_KEY = "CODES"
+        static let WIDGET_KEY = "WIDGET_CODES"
         
         
         static var myCodes: [String] = UserDefaults.standard.object(forKey: CODES_KEY) as? [String] ?? ["btc_usd", "eth_usd"] {
             didSet{
                 UserDefaults.standard.setValue(myCodes, forKey: CODES_KEY)
+            }
+        }
+        
+        
+        static var widgetCodes: [String] = UserDefaults.standard.object(forKey: WIDGET_KEY) as? [String] ?? ["btc_usd", "eth_usd","dsh_usd"] {
+            didSet{
+                UserDefaults.standard.setValue(myCodes, forKey: WIDGET_KEY)
             }
         }
     }
@@ -68,5 +75,27 @@ extension Currency{
     class func setMyCodes(_ codes:[String]){
         Codes.myCodes = codes
     }
+}
 
+extension Currency{
+    class func getWidgetCodes() -> [String]{
+        return Codes.widgetCodes
+    }
+    
+    class func getWidgetCode(_ index: Int = 0) -> String {
+        return Codes.widgetCodes[index]
+    }
+
+    
+    class func getAllWidgetCodesString() -> String{
+        return Codes.widgetCodes.joined(separator: "-")
+    }
+    
+    class func getWidgetCodesCount() -> Int{
+        return Codes.widgetCodes.count
+    }
+    
+    class func toWidgetCodeTitle(_ index: Int) -> String{
+        return Codes.widgetCodes[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
+    }
 }
