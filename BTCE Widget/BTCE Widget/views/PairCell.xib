@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PairCell" customModule="BTCE_Widget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="118"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-vW-yqV">
+                    <rect key="frame" x="5" y="48.5" width="46.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.30167643229166669" blue="0.2876247829861111" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-zE-tBw">
+                    <rect key="frame" x="61.5" y="48" width="46.5" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.3064742172408822" green="0.46384721641075488" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qeK-vW-yqV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="9iE-4B-C7k"/>
+                <constraint firstItem="2dS-zE-tBw" firstAttribute="leading" secondItem="qeK-vW-yqV" secondAttribute="trailing" constant="10" id="LR2-S3-JVP"/>
+                <constraint firstItem="qeK-vW-yqV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N66-vj-xt0"/>
+                <constraint firstItem="2dS-zE-tBw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QWM-qO-wbO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="code" destination="qeK-vW-yqV" id="VuN-gc-7xI"/>
+                <outlet property="price" destination="2dS-zE-tBw" id="9iE-mL-48g"/>
+            </connections>
+            <point key="canvasLocation" x="72.5" y="-220"/>
+        </view>
+    </objects>
+</document>

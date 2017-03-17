@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5A11E7B917C00B1DDCD /* PairCell.swift */; };
+		FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5A31E7B918B00B1DDCD /* PairCell.xib */; };
 		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
 		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
 		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FD01C5A11E7B917C00B1DDCD /* PairCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PairCell.swift; path = views/PairCell.swift; sourceTree = "<group>"; };
+		FD01C5A31E7B918B00B1DDCD /* PairCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PairCell.xib; path = views/PairCell.xib; sourceTree = "<group>"; };
 		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD01C5A01E7B916100B1DDCD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FD01C5A11E7B917C00B1DDCD /* PairCell.swift */,
+				FD01C5A31E7B918B00B1DDCD /* PairCell.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 		FDF1DB5A1E7A795B006FF017 /* BTCE Widget */ = {
 			isa = PBXGroup;
 			children = (
+				FD01C5A01E7B916100B1DDCD /* views */,
 				FDF4544F1E7ADF480020D551 /* ApiHelper.swift */,
 				FDF1DB721E7A79EF006FF017 /* utils */,
 				FDF1DB6D1E7A79A2006FF017 /* data */,
@@ -195,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */,
+				FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */,
 				FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */,
 				FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */,
 			);
@@ -212,6 +227,7 @@
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
+				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
 				FDF454401E7ADBB30020D551 /* Pair.swift in Sources */,
 			);
