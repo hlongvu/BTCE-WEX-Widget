@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-AT-fXT">
-                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ckq-bW-rLC"/>
@@ -33,9 +32,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="n6n-AT-fXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="47t-9J-9uH"/>
+                            <constraint firstItem="n6n-AT-fXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="47t-9J-9uH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n6n-AT-fXT" secondAttribute="bottom" id="9Bj-oG-SJ0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n6n-AT-fXT" secondAttribute="trailing" id="QsU-rW-rrv"/>
+                            <constraint firstAttribute="trailing" secondItem="n6n-AT-fXT" secondAttribute="trailing" id="QsU-rW-rrv"/>
                             <constraint firstItem="n6n-AT-fXT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jd0-9V-Rsd"/>
                         </constraints>
                     </view>
@@ -122,16 +121,16 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Options" id="lob-K1-seM"/>
-                    <navigationItem key="navigationItem" id="f2d-vF-jnv"/>
+                    <navigationItem key="navigationItem" title="Options" id="f2d-vF-jnv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi8-1B-60j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="631" y="794"/>
         </scene>
-        <!--Choose Trade PairVC-->
+        <!--Choose Trade Pairs-->
         <scene sceneID="f3r-mD-3aK">
             <objects>
-                <viewController id="7GQ-SJ-B9t" customClass="ChooseTradePairVC" customModule="BTCE_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Choose Trade Pairs" id="7GQ-SJ-B9t" customClass="ChooseTradePairVC" customModule="BTCE_Widget" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rkf-V8-RbV"/>
                         <viewControllerLayoutGuide type="bottom" id="FOV-TC-hZI"/>
@@ -140,12 +139,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-Kx-cCa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-Kx-cCa">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="paircell" textLabel="HYD-5R-B11" style="IBUITableViewCellStyleDefault" id="QMF-kH-70G">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QMF-kH-70G" id="DIF-Yx-ZfW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>

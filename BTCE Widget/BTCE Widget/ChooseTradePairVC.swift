@@ -10,20 +10,35 @@ import Foundation
 import UIKit
 
 class ChooseTradePairVC: UIViewController {
-    var newCodes = Dictionary<Int, String>()
+    var newCodes:[String] = []
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        newCodes = Currency.getAllMyCodesArray()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        Currency.appendAtIndex(Array(newCodes.values))
+        Currency.setMyCodes(newCodes)
+        
     }
     
+    func removeCode(_ code:String){
+        let index = newCodes.index(of: code)
+        if (index != nil){
+            newCodes.remove(at: index!)
+        }
+    }
+    
+    func addCode(_ code:String){
+        let index = newCodes.index(of: code)
+        if (index == nil){
+            newCodes.append(code)
+        }
+    }
+        
 }
 
 extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
@@ -39,8 +54,8 @@ extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "paircell", for: indexPath)
         cell.textLabel?.text = Currency.toCodeTitle(indexPath.row)
-        
-        if (Currency.containsAllCodes(indexPath.row)){
+        let code = Currency.getCode(indexPath.row)
+        if (newCodes.index(of: code) != nil){
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
         } else {
             cell.accessoryType = UITableViewCellAccessoryType.none
@@ -49,20 +64,19 @@ extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let cell = tableView.cellForRow(at: indexPath)
+        let code = Currency.getCode(indexPath.row)
+        
         if (cell?.accessoryType == UITableViewCellAccessoryType.none){
             cell?.accessoryType = UITableViewCellAccessoryType.checkmark
-            newCodes[indexPath.row] = Currency.getCode(indexPath.row)
+            addCode(code)
         } else{
-            newCodes.removeValue(forKey: indexPath.row)
+            removeCode(code)
             cell?.accessoryType = UITableViewCellAccessoryType.none
-             if (Currency.containsAllCodes(indexPath.row)){
-                cell?.accessoryType = UITableViewCellAccessoryType.none
-                Currency.removeMyCode(Currency.getCode(indexPath.row))
-            }
+            
         }
+        print(newCodes)
     }
 }

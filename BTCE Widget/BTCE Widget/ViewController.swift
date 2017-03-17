@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     let PAIR_CELL_ID = "PairCell"
     private var refreshControl: UIRefreshControl!
-
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,8 +42,8 @@ class ViewController: UIViewController {
     }
     
     func updatePrices(){
-        print(Currency.getAllMyCodes())
-        ApiHelper.getTickerPair2(pair:Currency.getAllMyCodes(), completion: {
+        print(Currency.getAllMyCodesString())
+        ApiHelper.getTickerPair2(pair:Currency.getAllMyCodesString(), completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
             if (rs != nil){
@@ -82,6 +81,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.setPair(pair!)
         }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

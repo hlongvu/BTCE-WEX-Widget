@@ -36,6 +36,10 @@ class Currency: NSObject {
     class func getCodesCount() -> Int{
         return Codes.allCodes.count
     }
+    
+    class func getAllCodes() -> [String]{
+        return Codes.allCodes
+    }
 }
 
 
@@ -49,38 +53,20 @@ extension Currency{
         return Codes.myCodes[index]
     }
     
-    class func appendAtIndex(_ values: [String]){
-        for code in values {
-            addMyCode(code)
-        }
-    }
-    class func removeAtIndex(_ index: Int){
-        Codes.myCodes.remove(at: index)
-    }
-    
-    class func removeMyCode(_ code:String){
-        let index = Codes.myCodes.index(of: code)
-        if (index != nil){
-            Codes.myCodes.remove(at: index!)
-        }
-    }
-    
-    class func addMyCode(_ code:String){
-        let index = Codes.myCodes.index(of: code)
-        if (index == nil){
-            Codes.myCodes.append(code)
-        }
-    }
-    
     class func getMyCodesCount() -> Int{
         return Codes.myCodes.count
     }
-    class func containsAllCodes(_ index: Int) -> Bool{
-        return Codes.myCodes.contains(Codes.allCodes[index])
+    
+    class func getAllMyCodesString() -> String{
+        return Codes.myCodes.joined(separator: "-")
     }
     
-    class func getAllMyCodes() -> String{
-        return Codes.myCodes.joined(separator: "-")
+    class func getAllMyCodesArray() -> [String]{
+        return Codes.myCodes
+    }
+
+    class func setMyCodes(_ codes:[String]){
+        Codes.myCodes = codes
     }
 
 }
