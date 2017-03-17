@@ -14,7 +14,8 @@ import ObjectMapper
 class ViewController: UIViewController {
     
     let PAIR_CELL_ID = "PairCell"
-    
+    private var refreshControl: UIRefreshControl!
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +24,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.\
-         tableView.register(UINib(nibName: PAIR_CELL_ID, bundle: nil), forCellReuseIdentifier: PAIR_CELL_ID)
+        
+        let tableViewController = UITableViewController()
+        tableViewController.tableView = self.tableView
+        
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(updatePrices), for: UIControlEvents.valueChanged)
+//        refreshControl?.backgroundColor = UIColor.black
+//        refreshControl?.tintColor = UIColor.white
+        
+        tableViewController.refreshControl = self.refreshControl                
+        tableView.register(UINib(nibName: PAIR_CELL_ID, bundle: nil), forCellReuseIdentifier: PAIR_CELL_ID)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,14 +43,18 @@ class ViewController: UIViewController {
     }
     
     func updatePrices(){
-        
-        ApiHelper.getTickerPair2(pair:Currency.getAllCodes(), completion: {
+        print(Currency.getAllMyCodes())
+        ApiHelper.getTickerPair2(pair:Currency.getAllMyCodes(), completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
-//            print (rs)
-            let dict : Dictionary<String, Pair>? = Mapper<Pair>().mapDictionary(JSONString: rs!)
-            self.priceList = dict!
-            self.tableView.reloadData()
+            if (rs != nil){
+                let dict : Dictionary<String, Pair>? = Mapper<Pair>().mapDictionary(JSONString: rs!)
+                if (dict != nil){
+                    self.priceList = dict!
+                    self.tableView.reloadData()
+                }
+            }
+            self.refreshControl?.endRefreshing()
         })
     }
 

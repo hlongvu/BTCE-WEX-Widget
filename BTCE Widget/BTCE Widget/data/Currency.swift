@@ -9,40 +9,69 @@
 import UIKit
 
 class Currency: NSObject {
-    private enum Codes {
-        static let allCodes = ["btc_usd", "usd_rur", "btc_rur", "btc_eur", "btc_cnh", "btc_gbp", "ltc_btc", "ltc_usd", "ltc_rur", "ltc_eur", "ltc_cnh", "ltc_gbp", "nmc_btc", "nmc_usd", "nvc_btc", "nvc_usd", "eur_usd", "eur_rur", "usd_cnh", "gbp_usd", "ppc_btc", "ppc_usd"]
+    
+    enum Codes {
+        static let allCodes = ["btc_usd","btc_rur","btc_eur","ltc_btc","ltc_usd","ltc_rur","ltc_eur","nmc_btc","nmc_usd","nvc_btc","nvc_usd","usd_rur","eur_usd","eur_rur","ppc_btc","ppc_usd","dsh_btc","dsh_usd","dsh_rur","dsh_eur","dsh_ltc","dsh_eth","eth_btc","eth_usd","eth_eur","eth_ltc","eth_rur"]
+        
         static let CODES_KEY = "CODES"
+        static let WIDGET_KEY = "CODES"
+        
+        
         static var myCodes: [String] = UserDefaults.standard.object(forKey: CODES_KEY) as? [String] ?? ["btc_usd", "eth_usd"] {
             didSet{
                 UserDefaults.standard.setValue(myCodes, forKey: CODES_KEY)
             }
         }
     }
+    
     class func toCodeTitle(_ index: Int) -> String{
-//        return Codes.allCodes[index].stringByReplacingOccurrencesOfString("_", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).uppercaseString
         return Codes.allCodes[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
-    }
-    class func toMyCodeTitle(_ index: Int) -> String{
-//        return Codes.myCodes[index].stringByReplacingOccurrencesOfString("_", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil).uppercaseString
-        return Codes.myCodes[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
     }
 
     /// Default value -> first code
     class func getCode(_ index: Int = 0) -> String {
         return Codes.allCodes[index]
     }
-    class func getMyCode(_ index: Int = 0) -> String {
-        return Codes.myCodes[index]
-    }
+  
     class func getCodesCount() -> Int{
         return Codes.allCodes.count
     }
+}
+
+
+extension Currency{
+    
+    class func toMyCodeTitle(_ index: Int) -> String{
+        return Codes.myCodes[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
+    }
+    
+    class func getMyCode(_ index: Int = 0) -> String {
+        return Codes.myCodes[index]
+    }
+    
     class func appendAtIndex(_ values: [String]){
-        Codes.myCodes += values
+        for code in values {
+            addMyCode(code)
+        }
     }
     class func removeAtIndex(_ index: Int){
         Codes.myCodes.remove(at: index)
     }
+    
+    class func removeMyCode(_ code:String){
+        let index = Codes.myCodes.index(of: code)
+        if (index != nil){
+            Codes.myCodes.remove(at: index!)
+        }
+    }
+    
+    class func addMyCode(_ code:String){
+        let index = Codes.myCodes.index(of: code)
+        if (index == nil){
+            Codes.myCodes.append(code)
+        }
+    }
+    
     class func getMyCodesCount() -> Int{
         return Codes.myCodes.count
     }
@@ -50,7 +79,8 @@ class Currency: NSObject {
         return Codes.myCodes.contains(Codes.allCodes[index])
     }
     
-    class func getAllCodes() -> String{
+    class func getAllMyCodes() -> String{
         return Codes.myCodes.joined(separator: "-")
     }
+
 }
