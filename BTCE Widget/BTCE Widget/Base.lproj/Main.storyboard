@@ -24,6 +24,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-AT-fXT">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ckq-bW-rLC"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VyS-cK-AXg"/>
@@ -50,7 +51,7 @@
         <!--Options-->
         <scene sceneID="ziV-Dn-i7s">
             <objects>
-                <tableViewController id="JgC-3X-1uR" sceneMemberID="viewController">
+                <tableViewController id="JgC-3X-1uR" customClass="OptionsVC" customModule="BTCE_Widget" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BEq-Cx-Ey9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,6 +95,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7GQ-SJ-B9t" kind="show" identifier="ChooseWidget" id="qKX-Rg-92f"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jgf-K7-aAt" style="IBUITableViewCellStyleDefault" id="qhK-1t-Fwe">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -125,7 +129,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi8-1B-60j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="631" y="794"/>
+            <point key="canvasLocation" x="660" y="916"/>
         </scene>
         <!--Choose Trade Pairs-->
         <scene sceneID="f3r-mD-3aK">
@@ -181,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiI-Ag-ofe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="794"/>
+            <point key="canvasLocation" x="1569" y="765"/>
         </scene>
         <!--Options-->
         <scene sceneID="56w-LP-cre">
@@ -198,7 +202,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KU-LJ-Z2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-185" y="794"/>
+            <point key="canvasLocation" x="-193" y="924"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jzG-ZE-beU">
@@ -223,4 +227,7 @@
         <image name="funds" width="23" height="23"/>
         <image name="settings" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="qKX-Rg-92f"/>
+    </inferredMetricsTieBreakers>
 </document>

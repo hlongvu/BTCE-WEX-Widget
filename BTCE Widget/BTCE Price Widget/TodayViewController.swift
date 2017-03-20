@@ -15,13 +15,16 @@ import ObjectMapper
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var tableView: UITableView!
     
+    let WIDGET_KEY = Currency.Codes.WIDGET_KEY
+    
     let WIDGET_CELL = "WidgetCell"
+    let CELL_HEIGHT = 75
     var priceList = Dictionary<String, Pair>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
-        let height = Currency.getWidgetCodesCount() * 50
+        let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
         print(height)
         self.preferredContentSize = CGSize(width:self.view.frame.size.width, height: CGFloat(height))
         
@@ -31,15 +34,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     }
     
-    
     @available(iOS 10.0, *)
     @available(iOSApplicationExtension 10.0, *)
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         if activeDisplayMode == .expanded {
-            let height = Currency.getWidgetCodesCount() * 50
+            let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
             self.preferredContentSize = CGSize(width: self.view.frame.size.width, height: CGFloat(height))
         }else if activeDisplayMode == .compact{
-            self.preferredContentSize = CGSize(width: maxSize.width, height: 110)
+            self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(CELL_HEIGHT))
         }
     }
     
@@ -65,8 +67,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     
     func loadPrice(){
-//        print(Currency.getAllWidgetCodesString())
-        ApiHelper.getTickerPair2(pair:Currency.getAllWidgetCodesString(), completion: {
+        print(Currency.getCodesStringByKey(WIDGET_KEY))
+        ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(WIDGET_KEY), completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
             if (rs != nil){
@@ -87,22 +89,20 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getWidgetCodesCount()
+        return Currency.getCodesCountByKey(WIDGET_KEY)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return CGFloat(CELL_HEIGHT)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WIDGET_CELL, for: indexPath) as! WidgetCell
         
-        cell.setPairCode(Currency.toWidgetCodeTitle(indexPath.row))
+        cell.setPairCode(Currency.getCodeTitle(key: WIDGET_KEY, index: indexPath.row))
         
-        let pair = self.priceList[Currency.getWidgetCode(indexPath.row)]
-        if (pair != nil){
-            cell.setPair(pair!)
-        }
+        let pair = self.priceList[Currency.getCodeByKey(key: WIDGET_KEY, index: indexPath.row)]
+        cell.setPair(pair)       
         
         return cell
     }

@@ -8,15 +8,24 @@
 
 import Foundation
 import UIKit
+
 class WidgetCell:UITableViewCell{
+    
     @IBOutlet weak var code: UILabel!
     
     @IBOutlet weak var price: UILabel!
  
-    func setPair(_ pair:Pair){
-        self.price.text = pair.last?.description
-//        self.hight.text = "High: " + (pair.high?.description ?? "")
-//        self.low.text = "Low: " + (pair.low?.description ?? "")
+    @IBOutlet weak var high: UILabel!
+    
+    @IBOutlet weak var low: UILabel!
+    
+    
+    func setPair(_ pair:Pair?){
+        
+        self.price.text = pair?.last?.description ?? "--"
+        self.high.text = "High: " + (pair?.high?.description ?? "--")
+        self.low.text = "Low: " + (pair?.low?.description ?? "--")
+        
     }
     
     func setPairCode(_ code:String){

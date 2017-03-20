@@ -14,6 +14,8 @@ import ObjectMapper
 class ViewController: UIViewController {
     
     let PAIR_CELL_ID = "PairCell"
+    let CODE_KEY = Currency.Codes.CODES_KEY
+    
     private var refreshControl: UIRefreshControl!
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,8 +44,8 @@ class ViewController: UIViewController {
     }
     
     func updatePrices(){
-        print(Currency.getAllMyCodesString())
-        ApiHelper.getTickerPair2(pair:Currency.getAllMyCodesString(), completion: {
+        print(Currency.getCodesStringByKey(CODE_KEY))
+        ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(CODE_KEY), completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
             if (rs != nil){
@@ -66,20 +68,19 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getMyCodesCount()
+        return Currency.getCodesCountByKey(CODE_KEY)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PAIR_CELL_ID, for: indexPath) as! PairCell
-        cell.setPairCode(Currency.toMyCodeTitle(indexPath.row))
-        let pair = self.priceList[Currency.getMyCode(indexPath.row)]
-        if (pair != nil){
-            cell.setPair(pair!)
-        }
+        cell.setPairCode(Currency.getCodeTitle(key: CODE_KEY, index: indexPath.row))
+        let pair = self.priceList[Currency.getCodeByKey(key: CODE_KEY, index: indexPath.row)]
+        cell.setPair(pair)
+       
         return cell
     }
     

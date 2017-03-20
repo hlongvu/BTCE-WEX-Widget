@@ -23,6 +23,7 @@
 		FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
 		FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
 		FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */; };
+		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
 		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
 		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		FD01C5B21E7BC9BB00B1DDCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
+		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */,
 				FDF1DB5D1E7A795B006FF017 /* ViewController.swift */,
 				FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */,
+				FD9737451E7FBB010058FBA5 /* OptionsVC.swift */,
 				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
 				FDF1DB621E7A795B006FF017 /* Assets.xcassets */,
 				FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */,
@@ -341,6 +344,7 @@
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
+				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
 				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
@@ -555,6 +559,7 @@
 				FD01C5BA1E7BC9BB00B1DDCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDF1DB531E7A795B006FF017 /* Build configuration list for PBXProject "BTCE Widget" */ = {
 			isa = XCConfigurationList;

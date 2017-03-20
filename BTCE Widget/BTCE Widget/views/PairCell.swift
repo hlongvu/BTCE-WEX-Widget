@@ -20,10 +20,10 @@ class PairCell:UITableViewCell{
     @IBOutlet weak var low: UILabel!
     
     
-    func setPair(_ pair:Pair){
-        self.price.text = pair.last?.description
-        self.hight.text = "High: " + (pair.high?.description ?? "")
-        self.low.text = "Low: " + (pair.low?.description ?? "")
+    func setPair(_ pair:Pair?){
+        self.price.text = pair?.last?.description ?? "--"
+        self.hight.text = "HIGH: " + (pair?.high?.description ?? "--")
+        self.low.text = "LOW: " + (pair?.low?.description ?? "--")
     }
     
     func setPairCode(_ code:String){
