@@ -24,22 +24,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
-        let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
-        print(height)
-        self.preferredContentSize = CGSize(width:self.view.frame.size.width, height: CGFloat(height))
-        
+        reloadHeight()
         if #available(iOSApplicationExtension 10.0, *) {
             self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         }
-        
+    }
+    
+    func reloadHeight(){
+        let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
+//        print(height)
+        self.preferredContentSize = CGSize(width:self.view.frame.size.width, height: CGFloat(height))
     }
     
     @available(iOS 10.0, *)
     @available(iOSApplicationExtension 10.0, *)
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         if activeDisplayMode == .expanded {
-            let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
-            self.preferredContentSize = CGSize(width: self.view.frame.size.width, height: CGFloat(height))
+            reloadHeight()
         }else if activeDisplayMode == .compact{
             self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(CELL_HEIGHT))
         }
@@ -67,7 +68,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     
     func loadPrice(){
-        print(Currency.getCodesStringByKey(WIDGET_KEY))
+//        print(Currency.getCodesStringByKey(WIDGET_KEY))
         ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(WIDGET_KEY), completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
@@ -77,6 +78,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 if (dict != nil){
                     self.priceList = dict!
                     self.tableView.reloadData()
+                    self.reloadHeight()
                 }
             }
         })
