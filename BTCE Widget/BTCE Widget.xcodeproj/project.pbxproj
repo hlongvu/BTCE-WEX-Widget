@@ -252,6 +252,7 @@
 				FDF1DB561E7A795B006FF017 /* Resources */,
 				FDF4544E1E7ADEDD0020D551 /* Embed Frameworks */,
 				FD01C5B71E7BC9BB00B1DDCD /* Embed App Extensions */,
+				FD349A071E822B3E00584218 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -336,6 +337,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FD349A071E822B3E00584218 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FD01C5A71E7BC9BB00B1DDCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -417,7 +437,7 @@
 				);
 				INFOPLIST_FILE = "BTCE Price Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget.BTCE-Price-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.btce.BTCE-Price-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -435,7 +455,7 @@
 				);
 				INFOPLIST_FILE = "BTCE Price Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget.BTCE-Price-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.btce.BTCE-Price-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -548,7 +568,7 @@
 				);
 				INFOPLIST_FILE = "BTCE Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.btce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -567,7 +587,7 @@
 				);
 				INFOPLIST_FILE = "BTCE Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sun.BTCE-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sun.btce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
