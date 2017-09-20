@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,10 +15,6 @@
         <scene sceneID="cwh-vc-ff4">
             <objects>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="BTCE_Price_Widget" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
-                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,11 +79,12 @@
                             </tableView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="AQC-QQ-DTc" secondAttribute="bottom" id="PKk-26-O5N"/>
-                            <constraint firstAttribute="leading" secondItem="AQC-QQ-DTc" secondAttribute="leading" id="SQo-8t-Ola"/>
-                            <constraint firstAttribute="trailing" secondItem="AQC-QQ-DTc" secondAttribute="trailing" id="W9O-lr-3Zc"/>
-                            <constraint firstItem="AQC-QQ-DTc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="oiR-d8-yjB"/>
+                            <constraint firstItem="OQ6-iz-5gp" firstAttribute="bottom" secondItem="AQC-QQ-DTc" secondAttribute="bottom" id="PKk-26-O5N"/>
+                            <constraint firstItem="OQ6-iz-5gp" firstAttribute="leading" secondItem="AQC-QQ-DTc" secondAttribute="leading" id="SQo-8t-Ola"/>
+                            <constraint firstItem="OQ6-iz-5gp" firstAttribute="trailing" secondItem="AQC-QQ-DTc" secondAttribute="trailing" id="W9O-lr-3Zc"/>
+                            <constraint firstItem="AQC-QQ-DTc" firstAttribute="top" secondItem="OQ6-iz-5gp" secondAttribute="top" id="oiR-d8-yjB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OQ6-iz-5gp"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>

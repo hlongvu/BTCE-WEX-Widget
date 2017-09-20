@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         updatePrices()
     }
     
-    func updatePrices(){
+    @objc func updatePrices(){
         print(Currency.getCodesStringByKey(CODE_KEY))
         ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(CODE_KEY), completion: {
             (response: DataResponse<String>) in
