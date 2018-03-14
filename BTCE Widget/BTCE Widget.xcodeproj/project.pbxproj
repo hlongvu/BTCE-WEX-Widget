@@ -24,6 +24,13 @@
 		FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
 		FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
+		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
+		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
+		FDC258132059881E00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
+		FDC258142059882400498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
+		FDC258152059882700498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
+		FDC258162059882F00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
+		FDC258182059886500498883 /* YLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258172059886500498883 /* YLColor.swift */; };
 		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
 		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
 		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
@@ -92,6 +99,10 @@
 		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
+		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
+		FDC258102059881E00498883 /* TypeName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
+		FDC258172059886500498883 /* YLColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLColor.swift; sourceTree = "<group>"; };
 		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +166,16 @@
 			path = "BTCE Price Widget";
 			sourceTree = "<group>";
 		};
+		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				FDC2580E2059881E00498883 /* SGAdapter.swift */,
+				FDC2580F2059881E00498883 /* SGModel.swift */,
+				FDC258102059881E00498883 /* TypeName.swift */,
+			);
+			path = SGViewAdapter;
+			sourceTree = "<group>";
+		};
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +228,9 @@
 		FDF1DB721E7A79EF006FF017 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				FDC2580D2059881E00498883 /* SGViewAdapter */,
 				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
+				FDC258172059886500498883 /* YLColor.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -363,9 +386,12 @@
 			files = (
 				FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */,
 				FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */,
+				FDC258162059882F00498883 /* TypeName.swift in Sources */,
+				FDC258152059882700498883 /* SGModel.swift in Sources */,
 				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
 				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,
 				FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */,
+				FDC258142059882400498883 /* SGAdapter.swift in Sources */,
 				FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */,
 				FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */,
 			);
@@ -379,12 +405,16 @@
 				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
+				FDC258182059886500498883 /* YLColor.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
 				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
 				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
+				FDC258112059881E00498883 /* SGAdapter.swift in Sources */,
+				FDC258132059881E00498883 /* TypeName.swift in Sources */,
 				FDF454401E7ADBB30020D551 /* Pair.swift in Sources */,
+				FDC258122059881E00498883 /* SGModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
