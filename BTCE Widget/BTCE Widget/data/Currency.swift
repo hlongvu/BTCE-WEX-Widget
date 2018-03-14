@@ -16,35 +16,8 @@ class Currency: NSObject {
         static let CODES_KEY = "CODES"
         static let WIDGET_KEY = "WIDGET_CODES"
         
-        /*
-        static var myCodes: [String] = UserDefaults.standard.object(forKey: CODES_KEY) as? [String] ?? ["btc_usd", "eth_usd"] {
-            didSet{
-                UserDefaults.standard.setValue(myCodes, forKey: CODES_KEY)
-            }
-        }
-        
-        
-        static var widgetCodes: [String] = UserDefaults.standard.object(forKey: WIDGET_KEY) as? [String] ?? ["btc_usd", "eth_usd","dsh_usd"] {
-            didSet{
-                UserDefaults.standard.setValue(myCodes, forKey: WIDGET_KEY)
-            }
-        }
-         */
-    }
-    
-    class func toCodeTitle(_ index: Int) -> String{
-        return Codes.allCodes[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
     }
 
-    /// Default value -> first code
-    class func getAllCodeAt(_ index: Int = 0) -> String {
-        return Codes.allCodes[index]
-    }
-  
-    class func getAllCodesCount() -> Int{
-        return Codes.allCodes.count
-    }
-    
     class func getAllCodes() -> [String]{
         return Codes.allCodes
     }
@@ -55,23 +28,6 @@ class Currency: NSObject {
     
     class func setCodeArrayByKey(key:String, codes:[String]){
         UserDefaults(suiteName:APPGROUP)?.setValue(codes, forKey: key)
-    }
-    
-    
-    class func getCodeTitle(key:String, index: Int) -> String{
-        return getCodeArrayByKey(key)[index].replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
-    }
-    
-    class func getCodeByKey(key:String, index: Int = 0) -> String {
-        return getCodeArrayByKey(key)[index]
-    }
-    
-    class func getCodesCountByKey(_ key:String) -> Int{
-        return getCodeArrayByKey(key).count
-    }
-    
-    class func getCodesStringByKey(_ key:String) -> String{
-        return getCodeArrayByKey(key).joined(separator: "-")
     }
     
 }

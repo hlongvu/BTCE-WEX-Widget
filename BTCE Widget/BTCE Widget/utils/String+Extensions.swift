@@ -24,4 +24,8 @@ extension String{
         return regex.firstMatch(in: self, options:[],
             range: NSMakeRange(0, utf16.count)) != nil
     }
+    
+    func toTradePairTitle() -> String {
+        return self.replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
+    }
 }

@@ -31,7 +31,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func reloadHeight(){
-        let height = Currency.getCodesCountByKey(WIDGET_KEY) * CELL_HEIGHT
+        let height = Currency.getCodeArrayByKey(WIDGET_KEY).count * CELL_HEIGHT
 //        print(height)
         self.preferredContentSize = CGSize(width:self.view.frame.size.width, height: CGFloat(height))
     }
@@ -69,7 +69,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func loadPrice(){
 //        print(Currency.getCodesStringByKey(WIDGET_KEY))
-        ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(WIDGET_KEY), completion: {
+        let pairs = Currency.getCodeArrayByKey(WIDGET_KEY).joined(separator: "-")
+        ApiHelper.getTickerPair2(pair:pairs, completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
             if (rs != nil){
@@ -91,7 +92,7 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getCodesCountByKey(WIDGET_KEY)
+        return Currency.getCodeArrayByKey(WIDGET_KEY).count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -101,9 +102,11 @@ extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WIDGET_CELL, for: indexPath) as! WidgetCell
         
-        cell.setPairCode(Currency.getCodeTitle(key: WIDGET_KEY, index: indexPath.row))
+        //cell.setPairCode(Currency.getCodeTitle(key: WIDGET_KEY, index: indexPath.row))
         
-        let pair = self.priceList[Currency.getCodeByKey(key: WIDGET_KEY, index: indexPath.row)]
+        cell.setPairCode(Currency.getCodeArrayByKey(WIDGET_KEY)[indexPath.row].toTradePairTitle())
+        
+        let pair = self.priceList[Currency.getCodeArrayByKey(WIDGET_KEY)[indexPath.row]]
         cell.setPair(pair)       
         
         return cell

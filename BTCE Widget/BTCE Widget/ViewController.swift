@@ -44,8 +44,9 @@ class ViewController: UIViewController {
     }
     
     @objc func updatePrices(){
-        print(Currency.getCodesStringByKey(CODE_KEY))
-        ApiHelper.getTickerPair2(pair:Currency.getCodesStringByKey(CODE_KEY), completion: {
+//        print(Currency.getCodesStringByKey(CODE_KEY))
+        let pairs = Currency.getCodeArrayByKey(CODE_KEY).joined(separator: "-")
+        ApiHelper.getTickerPair2(pair:pairs, completion: {
             (response: DataResponse<String>) in
             let rs = response.result.value
             if (rs != nil){
@@ -58,17 +59,13 @@ class ViewController: UIViewController {
             self.refreshControl?.endRefreshing()
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getCodesCountByKey(CODE_KEY)
+        //return Currency.getCodesCountByKey(CODE_KEY)
+         return Currency.getCodeArrayByKey(CODE_KEY).count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -77,8 +74,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PAIR_CELL_ID, for: indexPath) as! PairCell
-        cell.setPairCode(Currency.getCodeTitle(key: CODE_KEY, index: indexPath.row))
-        let pair = self.priceList[Currency.getCodeByKey(key: CODE_KEY, index: indexPath.row)]
+        //cell.setPairCode(Currency.getCodeTitle(key: CODE_KEY, index: indexPath.row))
+        
+        cell.setPairCode(Currency.getCodeArrayByKey(CODE_KEY)[indexPath.row].toTradePairTitle())
+        
+        let pair = self.priceList[Currency.getCodeArrayByKey(CODE_KEY)[indexPath.row]]
         cell.setPair(pair)
        
         return cell

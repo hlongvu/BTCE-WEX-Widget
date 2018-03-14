@@ -47,7 +47,7 @@ class ChooseTradePairVC: UIViewController {
 extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getAllCodesCount()
+        return Currency.getAllCodes().count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -56,8 +56,10 @@ extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "paircell", for: indexPath)
-        cell.textLabel?.text = Currency.toCodeTitle(indexPath.row)
-        let code = Currency.getAllCodeAt(indexPath.row)
+        //cell.textLabel?.text = Currency.toCodeTitle(indexPath.row)
+        //let code = Currency.getAllCodeAt(indexPath.row)
+        cell.textLabel?.text = Currency.getAllCodes()[indexPath.row].toTradePairTitle()
+        let code = Currency.getAllCodes()[indexPath.row]
         
         if (newCodes.index(of: code) != nil){
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
@@ -71,7 +73,8 @@ extension ChooseTradePairVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let cell = tableView.cellForRow(at: indexPath)
-        let code = Currency.getAllCodeAt(indexPath.row)
+        //let code = Currency.getAllCodeAt(indexPath.row)
+        let code = Currency.getAllCodes()[indexPath.row]
         
         if (cell?.accessoryType == UITableViewCellAccessoryType.none){
             cell?.accessoryType = UITableViewCellAccessoryType.checkmark
