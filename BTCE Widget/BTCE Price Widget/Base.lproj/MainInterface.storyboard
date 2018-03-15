@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2304" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,56 +21,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-QQ-DTc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WidgetCell" rowHeight="75" id="emx-36-7FU" customClass="WidgetCell" customModule="BTCE_Price_Widget" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="75"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emx-36-7FU" id="fKb-bo-uFj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-0r-iBA">
-                                                    <rect key="frame" x="13" y="13" width="36.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-Ec-LYw">
-                                                    <rect key="frame" x="13" y="34" width="63.5" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="637-iL-n5w">
-                                                    <rect key="frame" x="283.5" y="13" width="28.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTR-7l-CfA">
-                                                    <rect key="frame" x="287.5" y="34" width="24.5" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8jx-0r-iBA" firstAttribute="top" secondItem="fKb-bo-uFj" secondAttribute="topMargin" constant="5" id="7ik-2J-k8b"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="637-iL-n5w" secondAttribute="trailing" id="9lf-es-6RN"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bTR-7l-CfA" secondAttribute="trailing" id="aTK-w6-dmp"/>
-                                                <constraint firstItem="637-iL-n5w" firstAttribute="top" secondItem="fKb-bo-uFj" secondAttribute="topMargin" constant="5" id="cjM-6e-4Wx"/>
-                                                <constraint firstItem="dcP-Ec-LYw" firstAttribute="leading" secondItem="fKb-bo-uFj" secondAttribute="leadingMargin" constant="5" id="odV-Qg-frC"/>
-                                                <constraint firstItem="dcP-Ec-LYw" firstAttribute="top" secondItem="8jx-0r-iBA" secondAttribute="bottom" constant="5" id="r3c-VE-gac"/>
-                                                <constraint firstItem="8jx-0r-iBA" firstAttribute="leading" secondItem="fKb-bo-uFj" secondAttribute="leadingMargin" constant="5" id="uUg-8U-yt0"/>
-                                                <constraint firstItem="bTR-7l-CfA" firstAttribute="top" secondItem="637-iL-n5w" secondAttribute="bottom" constant="5" id="vjW-J5-3hz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="code" destination="8jx-0r-iBA" id="0MP-bX-AAk"/>
-                                            <outlet property="high" destination="637-iL-n5w" id="nTH-t7-4Ph"/>
-                                            <outlet property="low" destination="bTR-7l-CfA" id="HvC-SM-dPg"/>
-                                            <outlet property="price" destination="dcP-Ec-LYw" id="TZY-7k-qPt"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="M4Y-Lb-cyx" id="XJ3-BE-3V0"/>
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="NAB-aO-x7E"/>

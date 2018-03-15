@@ -22,7 +22,13 @@
 		FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
 		FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
 		FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
-		FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */; };
+		FD15C966205A280F00EAAC86 /* YLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258172059886500498883 /* YLColor.swift */; };
+		FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C967205A291200EAAC86 /* PairListAdapter.swift */; };
+		FD15C96A205A295500EAAC86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C969205A295500EAAC86 /* Utils.swift */; };
+		FD15C96B205A296500EAAC86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C969205A295500EAAC86 /* Utils.swift */; };
+		FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C967205A291200EAAC86 /* PairListAdapter.swift */; };
+		FD15C96D205A2D1800EAAC86 /* PairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5A11E7B917C00B1DDCD /* PairCell.swift */; };
+		FD15C96E205A2D1B00EAAC86 /* PairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5A31E7B918B00B1DDCD /* PairCell.xib */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -97,7 +103,8 @@
 		FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		FD01C5B21E7BC9BB00B1DDCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetCell.swift; sourceTree = "<group>"; };
+		FD15C967205A291200EAAC86 /* PairListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListAdapter.swift; sourceTree = "<group>"; };
+		FD15C969205A295500EAAC86 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
@@ -161,9 +168,26 @@
 				FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */,
 				FD01C5B11E7BC9BB00B1DDCD /* MainInterface.storyboard */,
 				FD01C5B41E7BC9BB00B1DDCD /* Info.plist */,
-				FD01C5C41E7BCD5000B1DDCD /* WidgetCell.swift */,
 			);
 			path = "BTCE Price Widget";
+			sourceTree = "<group>";
+		};
+		FD15C964205A250100EAAC86 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
+				FD15C965205A25ED00EAAC86 /* Home */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FD15C965205A25ED00EAAC86 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1DB5D1E7A795B006FF017 /* ViewController.swift */,
+				FD15C967205A291200EAAC86 /* PairListAdapter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
@@ -201,13 +225,12 @@
 				FD01C2FC1E7FE9C20011561D /* BTCE Widget.entitlements */,
 				FD01C5A01E7B916100B1DDCD /* views */,
 				FDF4544F1E7ADF480020D551 /* ApiHelper.swift */,
-				FDF1DB721E7A79EF006FF017 /* utils */,
 				FDF1DB6D1E7A79A2006FF017 /* data */,
+				FDF1DB721E7A79EF006FF017 /* utils */,
+				FD15C964205A250100EAAC86 /* ViewController */,
 				FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */,
-				FDF1DB5D1E7A795B006FF017 /* ViewController.swift */,
 				FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */,
 				FD9737451E7FBB010058FBA5 /* OptionsVC.swift */,
-				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
 				FDF1DB621E7A795B006FF017 /* Assets.xcassets */,
 				FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */,
 				FDF1DB671E7A795B006FF017 /* Info.plist */,
@@ -231,6 +254,7 @@
 				FDC2580D2059881E00498883 /* SGViewAdapter */,
 				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
 				FDC258172059886500498883 /* YLColor.swift */,
+				FD15C969205A295500EAAC86 /* Utils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -344,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD01C5B31E7BC9BB00B1DDCD /* MainInterface.storyboard in Resources */,
+				FD15C96E205A2D1B00EAAC86 /* PairCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,13 +412,16 @@
 				FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */,
 				FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */,
 				FDC258162059882F00498883 /* TypeName.swift in Sources */,
+				FD15C966205A280F00EAAC86 /* YLColor.swift in Sources */,
 				FDC258152059882700498883 /* SGModel.swift in Sources */,
+				FD15C96D205A2D1800EAAC86 /* PairCell.swift in Sources */,
+				FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
 				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,
-				FD01C5C51E7BCD5000B1DDCD /* WidgetCell.swift in Sources */,
 				FDC258142059882400498883 /* SGAdapter.swift in Sources */,
 				FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */,
 				FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */,
+				FD15C96B205A296500EAAC86 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +431,12 @@
 			files = (
 				FDF454501E7ADF480020D551 /* ApiHelper.swift in Sources */,
 				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
+				FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FDC258182059886500498883 /* YLColor.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
+				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,
 				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
 				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,

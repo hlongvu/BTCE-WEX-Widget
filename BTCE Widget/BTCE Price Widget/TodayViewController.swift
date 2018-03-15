@@ -19,20 +19,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     let WIDGET_CELL = "WidgetCell"
     let CELL_HEIGHT = 75
-    var priceList = Dictionary<String, Pair>()
+    var homeAdapter:PairListAdapter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
         reloadHeight()
         if #available(iOSApplicationExtension 10.0, *) {
             self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         }
+        
+        homeAdapter = PairListAdapter()
+        homeAdapter.codeKey = WIDGET_KEY
+        homeAdapter.setUp(self.tableView)
     }
     
     func reloadHeight(){
         let height = Currency.getCodeArrayByKey(WIDGET_KEY).count * CELL_HEIGHT
-//        print(height)
         self.preferredContentSize = CGSize(width:self.view.frame.size.width, height: CGFloat(height))
     }
     
@@ -44,16 +46,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }else if activeDisplayMode == .compact{
             self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(CELL_HEIGHT))
         }
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -77,8 +69,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 let dict : Dictionary<String, Pair>? = Mapper<Pair>().mapDictionary(JSONString: rs!)
 //                print(dict)
                 if (dict != nil){
-                    self.priceList = dict!
-                    self.tableView.reloadData()
+//                    self.priceList = dict!
+                    //self.tableView.reloadData()
+                    self.homeAdapter.priceList = dict!
+                    self.homeAdapter.reBuildModelsAndReloadTable()
                     self.reloadHeight()
                 }
             }
@@ -86,34 +80,4 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         
     }
-}
-
-extension TodayViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Currency.getCodeArrayByKey(WIDGET_KEY).count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(CELL_HEIGHT)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: WIDGET_CELL, for: indexPath) as! WidgetCell
-        
-        //cell.setPairCode(Currency.getCodeTitle(key: WIDGET_KEY, index: indexPath.row))
-        
-        cell.setPairCode(Currency.getCodeArrayByKey(WIDGET_KEY)[indexPath.row].toTradePairTitle())
-        
-        let pair = self.priceList[Currency.getCodeArrayByKey(WIDGET_KEY)[indexPath.row]]
-        cell.setPair(pair)       
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
 }

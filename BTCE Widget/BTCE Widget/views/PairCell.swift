@@ -30,3 +30,32 @@ class PairCell:UITableViewCell{
         self.code.text = code
     }
 }
+
+class PairCellModel:SGModel{
+    
+    var code:String
+    var pair:Pair?
+    
+    init(code:String, pair:Pair?) {
+        self.code = code
+        self.pair = pair
+    }
+    
+    override func getHeight() -> CGFloat {
+        return 75
+    }
+    
+    override func nibName() -> String {
+        return PairCell.typeName
+    }
+    
+    override func fillData(cell: UITableViewCell) {
+        super.fillData(cell: cell)
+        //        cell.backgroundColor = UIColor.white
+        //        cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0);
+        if let c = cell as? PairCell{
+            c.setPair(pair)
+            c.setPairCode(code)
+        }
+    }
+}
