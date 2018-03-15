@@ -7,18 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
 
-class TickerResponse: Mappable{
-    var btc_usd: Pair?
-    
-    required init?(map: Map) {
-        
-    }
-    
-    // Mappable
-    func mapping(map: Map) {
-        btc_usd <- map["btc_usd"]
-    }
-    
+class TickerResponse: Codable{
+    var pair: [String:Pair]?
 }

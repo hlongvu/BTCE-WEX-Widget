@@ -14,9 +14,7 @@
 		FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */; };
 		FD01C5B31E7BC9BB00B1DDCD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5B11E7BC9BB00B1DDCD /* MainInterface.storyboard */; };
 		FD01C5B81E7BC9BB00B1DDCD /* BTCE Price Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FD01C5AB1E7BC9BB00B1DDCD /* BTCE Price Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FD01C5BC1E7BCA2400B1DDCD /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454441E7ADED70020D551 /* ObjectMapper.framework */; };
 		FD01C5BD1E7BCA2600B1DDCD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454421E7ADED70020D551 /* Alamofire.framework */; };
-		FD01C5BE1E7BCA2900B1DDCD /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */; };
 		FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4544F1E7ADF480020D551 /* ApiHelper.swift */; };
 		FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */; };
 		FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
@@ -29,6 +27,11 @@
 		FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C967205A291200EAAC86 /* PairListAdapter.swift */; };
 		FD15C96D205A2D1800EAAC86 /* PairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD01C5A11E7B917C00B1DDCD /* PairCell.swift */; };
 		FD15C96E205A2D1B00EAAC86 /* PairCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD01C5A31E7B918B00B1DDCD /* PairCell.xib */; };
+		FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C96F205A326800EAAC86 /* PairInfo.swift */; };
+		FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C971205A32FA00EAAC86 /* InfoResponse.swift */; };
+		FD15C974205A359E00EAAC86 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */; };
+		FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */; };
+		FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -45,12 +48,8 @@
 		FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
 		FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */; };
 		FDF454401E7ADBB30020D551 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
-		FDF454471E7ADED70020D551 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454441E7ADED70020D551 /* ObjectMapper.framework */; };
 		FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454421E7ADED70020D551 /* Alamofire.framework */; };
 		FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454421E7ADED70020D551 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDF4544A1E7ADEDD0020D551 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */; };
-		FDF4544B1E7ADEDD0020D551 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FDF4544D1E7ADEDD0020D551 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDF454441E7ADED70020D551 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDF454501E7ADF480020D551 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4544F1E7ADF480020D551 /* ApiHelper.swift */; };
 		FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
 /* End PBXBuildFile section */
@@ -83,9 +82,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FDF4544D1E7ADEDD0020D551 /* ObjectMapper.framework in Embed Frameworks */,
+				FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */,
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
-				FDF4544B1E7ADEDD0020D551 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +103,10 @@
 		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD15C967205A291200EAAC86 /* PairListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListAdapter.swift; sourceTree = "<group>"; };
 		FD15C969205A295500EAAC86 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FD15C96F205A326800EAAC86 /* PairInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairInfo.swift; sourceTree = "<group>"; };
+		FD15C971205A32FA00EAAC86 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
+		FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableAlamofire.framework; path = Carthage/Build/iOS/CodableAlamofire.framework; sourceTree = "<group>"; };
+		FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableAlamofire.framework; path = Carthage/Build/iOS/CodableAlamofire.framework; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
@@ -121,8 +123,6 @@
 		FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDF4543F1E7ADBB30020D551 /* Pair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		FDF454421E7ADED70020D551 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		FDF454441E7ADED70020D551 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		FDF4544F1E7ADF480020D551 /* ApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
 		FDF454511E7AE3C50020D551 /* TickerResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,9 +133,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD01C5AD1E7BC9BB00B1DDCD /* NotificationCenter.framework in Frameworks */,
-				FD01C5BC1E7BCA2400B1DDCD /* ObjectMapper.framework in Frameworks */,
 				FD01C5BD1E7BCA2600B1DDCD /* Alamofire.framework in Frameworks */,
-				FD01C5BE1E7BCA2900B1DDCD /* AlamofireObjectMapper.framework in Frameworks */,
+				FD15C974205A359E00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF454471E7ADED70020D551 /* ObjectMapper.framework in Frameworks */,
-				FDF4544A1E7ADEDD0020D551 /* AlamofireObjectMapper.framework in Frameworks */,
+				FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +201,7 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */,
 				FDF1DB5A1E7A795B006FF017 /* BTCE Widget */,
 				FD01C5AE1E7BC9BB00B1DDCD /* BTCE Price Widget */,
 				FDF1DB591E7A795B006FF017 /* Products */,
@@ -244,6 +243,8 @@
 				FDF1DB6E1E7A79A2006FF017 /* Currency.swift */,
 				FDF4543F1E7ADBB30020D551 /* Pair.swift */,
 				FDF454511E7AE3C50020D551 /* TickerResponse.swift */,
+				FD15C96F205A326800EAAC86 /* PairInfo.swift */,
+				FD15C971205A32FA00EAAC86 /* InfoResponse.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -262,9 +263,8 @@
 		FDF454411E7ADED60020D551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */,
 				FDF454421E7ADED70020D551 /* Alamofire.framework */,
-				FDF454431E7ADED70020D551 /* AlamofireObjectMapper.framework */,
-				FDF454441E7ADED70020D551 /* ObjectMapper.framework */,
 				FD01C5AC1E7BC9BB00B1DDCD /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -318,7 +318,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Long Vu";
 				TargetAttributes = {
 					FD01C5AA1E7BC9BB00B1DDCD = {
@@ -436,6 +436,8 @@
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FDC258182059886500498883 /* YLColor.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
+				FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */,
+				FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */,
 				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,
 				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
@@ -533,7 +535,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -541,7 +545,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -584,7 +592,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -592,7 +602,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

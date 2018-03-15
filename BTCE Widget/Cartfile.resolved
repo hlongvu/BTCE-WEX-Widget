@@ -1,3 +1,2 @@
 github "Alamofire/Alamofire" "4.7.0"
-github "Hearst-DD/ObjectMapper" "2.2.9"
-github "tristanhimmelman/AlamofireObjectMapper" "4.1.0"
+github "Otbivnoe/CodableAlamofire" "1.1.0"

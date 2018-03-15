@@ -45,19 +45,13 @@ class ViewController: UIViewController {
     
     @objc func updatePrices(){
         let pairs = Currency.getCodeArrayByKey(CODE_KEY).joined(separator: "-")
-        ApiHelper.getTickerPair2(pair:pairs, completion: {
-            (response: DataResponse<String>) in
-            let rs = response.result.value
-            if (rs != nil){
-                let dict : Dictionary<String, Pair>? = Mapper<Pair>().mapDictionary(JSONString: rs!)
-                if (dict != nil){
-//                    self.priceList = dict!
-                    self.homeAdapter.priceList = dict!
-                    self.homeAdapter.reBuildModelsAndReloadTable()
-                }
-            }
+        ApiHelper.getTickers(pairs: pairs){
+            dict in
+            self.homeAdapter.priceList = dict!
+            self.homeAdapter.reBuildModelsAndReloadTable()
             self.refreshControl?.endRefreshing()
-        })
+        }
+        
     }
 }
 
