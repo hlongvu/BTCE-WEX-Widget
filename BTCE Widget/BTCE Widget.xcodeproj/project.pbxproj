@@ -20,6 +20,9 @@
 		FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB6E1E7A79A2006FF017 /* Currency.swift */; };
 		FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF4543F1E7ADBB30020D551 /* Pair.swift */; };
 		FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF454511E7AE3C50020D551 /* TickerResponse.swift */; };
+		FD14A21A205AB2E800C992D6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A219205AB2E800C992D6 /* Router.swift */; };
+		FD14A21C205AB31C00C992D6 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD14A21B205AB31C00C992D6 /* DetailVC.swift */; };
+		FD14A21E205AB32800C992D6 /* DetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD14A21D205AB32800C992D6 /* DetailVC.storyboard */; };
 		FD15C966205A280F00EAAC86 /* YLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258172059886500498883 /* YLColor.swift */; };
 		FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C967205A291200EAAC86 /* PairListAdapter.swift */; };
 		FD15C96A205A295500EAAC86 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C969205A295500EAAC86 /* Utils.swift */; };
@@ -103,6 +106,9 @@
 		FD01C5AF1E7BC9BB00B1DDCD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		FD01C5B21E7BC9BB00B1DDCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FD01C5B41E7BC9BB00B1DDCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD14A219205AB2E800C992D6 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FD14A21B205AB31C00C992D6 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		FD14A21D205AB32800C992D6 /* DetailVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailVC.storyboard; sourceTree = "<group>"; };
 		FD15C967205A291200EAAC86 /* PairListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListAdapter.swift; sourceTree = "<group>"; };
 		FD15C969205A295500EAAC86 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		FD15C96F205A326800EAAC86 /* PairInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairInfo.swift; sourceTree = "<group>"; };
@@ -172,11 +178,39 @@
 			path = "BTCE Price Widget";
 			sourceTree = "<group>";
 		};
+		FD14A216205AB1C000C992D6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FD9737451E7FBB010058FBA5 /* OptionsVC.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FD14A217205AB1DE00C992D6 /* ChooseTradePair */ = {
+			isa = PBXGroup;
+			children = (
+				FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */,
+			);
+			path = ChooseTradePair;
+			sourceTree = "<group>";
+		};
+		FD14A218205AB2A500C992D6 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FD14A21B205AB31C00C992D6 /* DetailVC.swift */,
+				FD14A21D205AB32800C992D6 /* DetailVC.storyboard */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		FD15C964205A250100EAAC86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
+				FD14A218205AB2A500C992D6 /* Details */,
 				FD15C965205A25ED00EAAC86 /* Home */,
+				FD14A216205AB1C000C992D6 /* Settings */,
+				FD14A217205AB1DE00C992D6 /* ChooseTradePair */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -230,8 +264,6 @@
 				FDF1DB721E7A79EF006FF017 /* utils */,
 				FD15C964205A250100EAAC86 /* ViewController */,
 				FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */,
-				FD01C5A51E7BAAE500B1DDCD /* ChooseTradePairVC.swift */,
-				FD9737451E7FBB010058FBA5 /* OptionsVC.swift */,
 				FDF1DB621E7A795B006FF017 /* Assets.xcassets */,
 				FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */,
 				FDF1DB671E7A795B006FF017 /* Info.plist */,
@@ -254,6 +286,7 @@
 		FDF1DB721E7A79EF006FF017 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				FD14A219205AB2E800C992D6 /* Router.swift */,
 				FDC2580D2059881E00498883 /* SGViewAdapter */,
 				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
 				FDC258172059886500498883 /* YLColor.swift */,
@@ -378,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD14A21E205AB32800C992D6 /* DetailVC.storyboard in Resources */,
 				FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */,
 				FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */,
 				FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */,
@@ -438,7 +472,9 @@
 				FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
+				FD14A21C205AB31C00C992D6 /* DetailVC.swift in Sources */,
 				FDC258182059886500498883 /* YLColor.swift in Sources */,
+				FD14A21A205AB2E800C992D6 /* Router.swift in Sources */,
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
 				FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */,
 				FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */,
