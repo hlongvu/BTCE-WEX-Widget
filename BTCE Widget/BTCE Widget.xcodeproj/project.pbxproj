@@ -32,6 +32,8 @@
 		FD15C974205A359E00EAAC86 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */; };
 		FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */; };
 		FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD15C978205A551300EAAC86 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C971205A32FA00EAAC86 /* InfoResponse.swift */; };
+		FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C96F205A326800EAAC86 /* PairInfo.swift */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -415,6 +417,8 @@
 				FD15C966205A280F00EAAC86 /* YLColor.swift in Sources */,
 				FDC258152059882700498883 /* SGModel.swift in Sources */,
 				FD15C96D205A2D1800EAAC86 /* PairCell.swift in Sources */,
+				FD15C978205A551300EAAC86 /* InfoResponse.swift in Sources */,
+				FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */,
 				FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
 				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,

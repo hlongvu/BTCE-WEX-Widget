@@ -10,6 +10,6 @@ import Foundation
 import ObjectMapper
 
 class InfoResponse: Codable{
-    var server_time: Int64?
+    var server_time: Date?
      var pairs: [String : PairInfo] = [:]
 }

@@ -24,7 +24,7 @@ class ApiHelper{
         Alamofire.request(URL).responseString(completionHandler: completion)
     }*/
     
-    static func getTickerPair2(pair:String, completion: @escaping (DataResponse<String>) -> Void){
+    private static func getTickerPair2(pair:String, completion: @escaping (DataResponse<String>) -> Void){
         let URL = API_HOST + "/ticker/" + pair +  "?ignore_invalid=1";
         Alamofire.request(URL).responseString(completionHandler: completion)
     }
@@ -42,6 +42,20 @@ class ApiHelper{
                 completion(nil)
             }
         })
+    }
+    
+    static func getPairInfo(completion: @escaping ([String]) -> Void){
+        let URL = API_HOST + "/info"
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        Alamofire.request(URL).responseDecodableObject(decoder: decoder){
+             (response: DataResponse<InfoResponse>) in
+               // print(response.value?.pairs)
+            let availablePairs = response.value?.pairs.filter{ ($0.value.hidden ?? 1) == 0 }
+            completion ( Array( availablePairs!.keys ) )
+        }
+        
+        
     }
     
 }

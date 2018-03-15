@@ -36,11 +36,21 @@ class ViewController: UIViewController {
         homeAdapter.codeKey = CODE_KEY
         homeAdapter.setUp(self.tableView)
         updatePrices()
+        getPairsInfo()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    func getPairsInfo(){
+        ApiHelper.getPairInfo(){
+            listPairs in
+            print("complete ", listPairs)
+            Currency.saveAllCodesFromWeb(allCodes: listPairs)
+        }
     }
     
     @objc func updatePrices(){
@@ -51,7 +61,6 @@ class ViewController: UIViewController {
             self.homeAdapter.reBuildModelsAndReloadTable()
             self.refreshControl?.endRefreshing()
         }
-        
     }
 }
 

@@ -8,11 +8,11 @@
 
 import Foundation
 class PairInfo : Codable {
-    var decimal_places : Double?
+    var decimal_places : Int?
     var min_price : Double?
     var max_price : Double?
     var min_amount : Double?
-    var hidden : Double?
+    var hidden : Int?
     var fee : Double?
     
 }

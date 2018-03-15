@@ -16,10 +16,12 @@ class Currency: NSObject {
         static let CODES_KEY = "CODES"
         static let WIDGET_KEY = "WIDGET_CODES"
         
+        static let CODES_ALL = "CODES_ALL"
+        
     }
 
-    class func getAllCodes() -> [String]{
-        return Codes.allCodes
+    class func getAllCodes() -> [String] {
+        return UserDefaults(suiteName:APPGROUP)?.object(forKey: Codes.CODES_ALL) as? [String] ?? Codes.allCodes
     }
     
     class func getCodeArrayByKey(_ key:String) -> [String]{
@@ -30,4 +32,7 @@ class Currency: NSObject {
         UserDefaults(suiteName:APPGROUP)?.setValue(codes, forKey: key)
     }
     
+    class func saveAllCodesFromWeb(allCodes: [String]){
+        UserDefaults(suiteName:APPGROUP)?.setValue(allCodes, forKey: Codes.CODES_ALL)
+    }
 }
