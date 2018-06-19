@@ -51,6 +51,14 @@
 		FD3CF0CE20D8FE88003BF201 /* WexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CD20D8FE88003BF201 /* WexKey.swift */; };
 		FD3CF0D020D90383003BF201 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CF20D90383003BF201 /* LoadingCell.swift */; };
 		FD3CF0D220D90426003BF201 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3CF0D120D90426003BF201 /* LoadingCell.xib */; };
+		FD3CF0D820D93542003BF201 /* TInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0D720D93542003BF201 /* TInfoResponse.swift */; };
+		FD3CF0DA20D939D9003BF201 /* TInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0D720D93542003BF201 /* TInfoResponse.swift */; };
+		FD3CF0DC20D942AC003BF201 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */; };
+		FD3CF0DE20D942BC003BF201 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3CF0E020D942C9003BF201 /* Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0DF20D942C9003BF201 /* Crypto.framework */; };
+		FD3CF0E120D942C9003BF201 /* Crypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0DF20D942C9003BF201 /* Crypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3CF0E220D94704003BF201 /* WexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CD20D8FE88003BF201 /* WexKey.swift */; };
+		FD3CF0E420D94746003BF201 /* TApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0E320D94746003BF201 /* TApiHelper.swift */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -101,6 +109,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FD3CF0DE20D942BC003BF201 /* CommonCrypto.framework in Embed Frameworks */,
+				FD3CF0E120D942C9003BF201 /* Crypto.framework in Embed Frameworks */,
 				FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */,
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
 				FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */,
@@ -141,6 +151,10 @@
 		FD3CF0CD20D8FE88003BF201 /* WexKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WexKey.swift; sourceTree = "<group>"; };
 		FD3CF0CF20D90383003BF201 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		FD3CF0D120D90426003BF201 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		FD3CF0D720D93542003BF201 /* TInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TInfoResponse.swift; sourceTree = "<group>"; };
+		FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		FD3CF0DF20D942C9003BF201 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
+		FD3CF0E320D94746003BF201 /* TApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TApiHelper.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
@@ -179,6 +193,8 @@
 				FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */,
 				FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
+				FD3CF0E020D942C9003BF201 /* Crypto.framework in Frameworks */,
+				FD3CF0DC20D942AC003BF201 /* CommonCrypto.framework in Frameworks */,
 				FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +299,25 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		FD3CF0D620D9352C003BF201 /* tapi */ = {
+			isa = PBXGroup;
+			children = (
+				FD3CF0D720D93542003BF201 /* TInfoResponse.swift */,
+			);
+			path = tapi;
+			sourceTree = "<group>";
+		};
+		FD3CF0D920D93870003BF201 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				FDF454511E7AE3C50020D551 /* TickerResponse.swift */,
+				FD15C96F205A326800EAAC86 /* PairInfo.swift */,
+				FD15C971205A32FA00EAAC86 /* InfoResponse.swift */,
+				FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +331,8 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FD3CF0DF20D942C9003BF201 /* Crypto.framework */,
+				FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */,
 				FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */,
 				FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */,
 				FDF1DB5A1E7A795B006FF017 /* BTCE Widget */,
@@ -319,7 +356,6 @@
 			children = (
 				FD01C2FC1E7FE9C20011561D /* BTCE Widget.entitlements */,
 				FD01C5A01E7B916100B1DDCD /* views */,
-				FDF4544F1E7ADF480020D551 /* ApiHelper.swift */,
 				FDF1DB6D1E7A79A2006FF017 /* data */,
 				FDF1DB721E7A79EF006FF017 /* utils */,
 				FD15C964205A250100EAAC86 /* ViewController */,
@@ -334,12 +370,12 @@
 		FDF1DB6D1E7A79A2006FF017 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				FDF4544F1E7ADF480020D551 /* ApiHelper.swift */,
+				FD3CF0E320D94746003BF201 /* TApiHelper.swift */,
+				FD3CF0D920D93870003BF201 /* public */,
+				FD3CF0D620D9352C003BF201 /* tapi */,
 				FDF1DB6E1E7A79A2006FF017 /* Currency.swift */,
 				FDF4543F1E7ADBB30020D551 /* Pair.swift */,
-				FDF454511E7AE3C50020D551 /* TickerResponse.swift */,
-				FD15C96F205A326800EAAC86 /* PairInfo.swift */,
-				FD15C971205A32FA00EAAC86 /* InfoResponse.swift */,
-				FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -510,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3CF0E220D94704003BF201 /* WexKey.swift in Sources */,
 				FD01C5BF1E7BCC5A00B1DDCD /* ApiHelper.swift in Sources */,
 				FD01C5C01E7BCC5A00B1DDCD /* String+Extensions.swift in Sources */,
 				FDC258162059882F00498883 /* TypeName.swift in Sources */,
@@ -519,6 +556,7 @@
 				FD15C978205A551300EAAC86 /* InfoResponse.swift in Sources */,
 				FD3CF0B720D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */,
+				FD3CF0DA20D939D9003BF201 /* TInfoResponse.swift in Sources */,
 				FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
 				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,
@@ -547,6 +585,7 @@
 				FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */,
 				FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */,
 				FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */,
+				FD3CF0E420D94746003BF201 /* TApiHelper.swift in Sources */,
 				FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,
 				FD3CF0D020D90383003BF201 /* LoadingCell.swift in Sources */,
@@ -559,6 +598,7 @@
 				FDC258112059881E00498883 /* SGAdapter.swift in Sources */,
 				FDC258132059881E00498883 /* TypeName.swift in Sources */,
 				FDF454401E7ADBB30020D551 /* Pair.swift in Sources */,
+				FD3CF0D820D93542003BF201 /* TInfoResponse.swift in Sources */,
 				FDC258122059881E00498883 /* SGModel.swift in Sources */,
 				FD3CF0CB20D8F89B003BF201 /* NoAPIKeyCell.swift in Sources */,
 			);

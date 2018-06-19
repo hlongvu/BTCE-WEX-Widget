@@ -17,12 +17,19 @@ class AccountViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView() 
         adapter = AccountAdapter()
+        adapter?.wexKey = WexKey.getSaved()
+        adapter?.isLoading  = false
+        
         adapter?.setUp(self.tableView)
         
         let wexKey = WexKey.getSaved()
         if wexKey != nil{
             print("have key")
-        }        
+            print(wexKey?.apiKey)
+            print(wexKey?.secretKey)
+        }
+        
+        TApiHelper.getTInfo()
         
     }
     

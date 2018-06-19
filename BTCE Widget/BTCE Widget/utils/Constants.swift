@@ -16,4 +16,5 @@ class Constants {
     
     
     static var KEY_SAVE_WEXKEY = "KEY_SAVE_WEXKEY"
+    static var KEY_SAVE_NONCE = "KEY_SAVE_NONCE"
 }

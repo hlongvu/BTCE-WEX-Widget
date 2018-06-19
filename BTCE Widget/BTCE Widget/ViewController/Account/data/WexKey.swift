@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Crypto
 class WexKey: Codable {
     var apiKey: String = ""
     var secretKey: String = ""
@@ -40,5 +41,9 @@ class WexKey: Codable {
             return wexKey
         }
         return nil
+    }
+    
+    func signData(data:String) -> String{
+        return HMAC.sign(message: data, algorithm: .sha256, key: self.secretKey)!
     }
 }

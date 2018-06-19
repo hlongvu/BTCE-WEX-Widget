@@ -13,4 +13,12 @@ class Utils {
         let cellNib = UINib.init(nibName: name, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: name)
     }
+    
+    static func calculateInitialNonce()->Int{
+        let dataFormat = DateFormatter()
+        dataFormat.dateFormat = "yyyy-MM-dd HH:mm:ss xxxx"
+        let timeStamp = NSDate().timeIntervalSince(dataFormat.date(from: "2012-04-18 00:00:03 +0600")!)
+        let currentNonce = Int(timeStamp)
+        return currentNonce
+    }
 }
