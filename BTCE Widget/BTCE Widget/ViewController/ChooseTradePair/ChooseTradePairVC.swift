@@ -20,7 +20,19 @@ class ChooseTradePairVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         newCodes = Currency.getCodeArrayByKey(type)
-        print (newCodes)
+        removeNotSupportedCode()
+        //print (newCodes)
+    }
+    
+    func removeNotSupportedCode(){
+        let allCodes = Currency.getAllCodes()
+        var new : [String] = []
+        for code in newCodes{
+            if allCodes.index(of: code) != nil{
+                new.append(code)
+            }
+        }
+        newCodes = new
     }
     
     override func viewWillDisappear(_ animated: Bool) {

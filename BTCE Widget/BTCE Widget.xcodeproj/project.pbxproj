@@ -44,6 +44,13 @@
 		FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */; };
 		FD3CF0BD20D8D7D8003BF201 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */; };
 		FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */; };
+		FD3CF0C220D8F50F003BF201 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0C120D8F50F003BF201 /* AccountViewController.swift */; };
+		FD3CF0C520D8F56D003BF201 /* AccountAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0C420D8F56D003BF201 /* AccountAdapter.swift */; };
+		FD3CF0C920D8F5D7003BF201 /* NoAPIKeyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3CF0C820D8F5D7003BF201 /* NoAPIKeyCell.xib */; };
+		FD3CF0CB20D8F89B003BF201 /* NoAPIKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CA20D8F89B003BF201 /* NoAPIKeyCell.swift */; };
+		FD3CF0CE20D8FE88003BF201 /* WexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CD20D8FE88003BF201 /* WexKey.swift */; };
+		FD3CF0D020D90383003BF201 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CF20D90383003BF201 /* LoadingCell.swift */; };
+		FD3CF0D220D90426003BF201 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3CF0D120D90426003BF201 /* LoadingCell.xib */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -127,6 +134,13 @@
 		FD3CF0B520D8D004003BF201 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
 		FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		FD3CF0C120D8F50F003BF201 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		FD3CF0C420D8F56D003BF201 /* AccountAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAdapter.swift; sourceTree = "<group>"; };
+		FD3CF0C820D8F5D7003BF201 /* NoAPIKeyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoAPIKeyCell.xib; sourceTree = "<group>"; };
+		FD3CF0CA20D8F89B003BF201 /* NoAPIKeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAPIKeyCell.swift; sourceTree = "<group>"; };
+		FD3CF0CD20D8FE88003BF201 /* WexKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WexKey.swift; sourceTree = "<group>"; };
+		FD3CF0CF20D90383003BF201 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		FD3CF0D120D90426003BF201 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
@@ -177,6 +191,8 @@
 			children = (
 				FD01C5A11E7B917C00B1DDCD /* PairCell.swift */,
 				FD01C5A31E7B918B00B1DDCD /* PairCell.xib */,
+				FD3CF0CF20D90383003BF201 /* LoadingCell.swift */,
+				FD3CF0D120D90426003BF201 /* LoadingCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -242,8 +258,29 @@
 		FD3CF0C020D8F439003BF201 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				FD3CF0CC20D8FE71003BF201 /* data */,
+				FD3CF0C720D8F5BD003BF201 /* views */,
+				FD3CF0C120D8F50F003BF201 /* AccountViewController.swift */,
+				FD3CF0C420D8F56D003BF201 /* AccountAdapter.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		FD3CF0C720D8F5BD003BF201 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FD3CF0C820D8F5D7003BF201 /* NoAPIKeyCell.xib */,
+				FD3CF0CA20D8F89B003BF201 /* NoAPIKeyCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FD3CF0CC20D8FE71003BF201 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FD3CF0CD20D8FE88003BF201 /* WexKey.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
@@ -437,11 +474,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3CF0D220D90426003BF201 /* LoadingCell.xib in Resources */,
 				FD14A21E205AB32800C992D6 /* DetailVC.storyboard in Resources */,
 				FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */,
 				FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */,
 				FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */,
 				FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */,
+				FD3CF0C920D8F5D7003BF201 /* NoAPIKeyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +537,7 @@
 				FDF454501E7ADF480020D551 /* ApiHelper.swift in Sources */,
 				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
 				FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */,
+				FD3CF0C520D8F56D003BF201 /* AccountAdapter.swift in Sources */,
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FD14A21C205AB31C00C992D6 /* DetailVC.swift in Sources */,
@@ -509,14 +549,18 @@
 				FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */,
 				FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,
+				FD3CF0D020D90383003BF201 /* LoadingCell.swift in Sources */,
 				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
 				FDF1DB5E1E7A795B006FF017 /* PriceViewController.swift in Sources */,
+				FD3CF0C220D8F50F003BF201 /* AccountViewController.swift in Sources */,
+				FD3CF0CE20D8FE88003BF201 /* WexKey.swift in Sources */,
 				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
 				FDC258112059881E00498883 /* SGAdapter.swift in Sources */,
 				FDC258132059881E00498883 /* TypeName.swift in Sources */,
 				FDF454401E7ADBB30020D551 /* Pair.swift in Sources */,
 				FDC258122059881E00498883 /* SGModel.swift in Sources */,
+				FD3CF0CB20D8F89B003BF201 /* NoAPIKeyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,4 +9,11 @@
 import Foundation
 class Constants {
     static var KEY_CLICK_CELL = "KEY_CLICK_CELL"
+    
+    
+    static var KEY_CLICK_SAVE_API = "KEY_CLICK_SAVE_API"
+    
+    
+    
+    static var KEY_SAVE_WEXKEY = "KEY_SAVE_WEXKEY"
 }

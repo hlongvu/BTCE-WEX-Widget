@@ -36,10 +36,7 @@ class PriceViewController: UIViewController {
         homeAdapter.setUp(self.tableView)
         updatePrices()
         getPairsInfo()
-        
-        
-       
-        
+                
     }
     
     override func viewDidAppear(_ animated: Bool) {
