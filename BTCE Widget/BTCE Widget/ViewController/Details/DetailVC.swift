@@ -8,10 +8,28 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 class DetailVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    var code : String = ""
+
+    var webView: WKWebView!
     
     
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+//        webView.uiDelegate = self
+        view = webView
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = code
+        let pair  = code.replacingOccurrences(of: "/", with: "")
+        
+        let myURL = URL(string:"https://s.tradingview.com/widgetembed/?symbol=WEX%3A\(pair)&interval=15")
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+    }
     
 }

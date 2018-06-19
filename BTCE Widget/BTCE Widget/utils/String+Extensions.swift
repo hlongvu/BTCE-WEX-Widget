@@ -28,4 +28,8 @@ extension String{
     func toTradePairTitle() -> String {
         return self.replacingOccurrences(of: "_", with: "/", options: .literal, range: nil).uppercased()
     }
+    
+    func toTradePairCode() -> String {
+        return self.replacingOccurrences(of: "/", with: "_", options: .literal, range: nil).lowercased()
+    }
 }

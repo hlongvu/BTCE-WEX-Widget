@@ -18,7 +18,7 @@ class Router {
     
     static func openDetails(fromVC: UIViewController, pair:String){
         let detailVC:DetailVC = getViewController()
-       
+        detailVC.code = pair
         fromVC.navigationController?.pushViewController(detailVC, animated: true)
     }
     

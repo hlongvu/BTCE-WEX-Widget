@@ -37,6 +37,13 @@
 		FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD15C978205A551300EAAC86 /* InfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C971205A32FA00EAAC86 /* InfoResponse.swift */; };
 		FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C96F205A326800EAAC86 /* PairInfo.swift */; };
+		FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */; };
+		FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0B520D8D004003BF201 /* Constants.swift */; };
+		FD3CF0B720D8D004003BF201 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0B520D8D004003BF201 /* Constants.swift */; };
+		FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */; };
+		FD3CF0BD20D8D7D8003BF201 /* OrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */; };
+		FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
@@ -46,7 +53,7 @@
 		FDC258162059882F00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
 		FDC258182059886500498883 /* YLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258172059886500498883 /* YLColor.swift */; };
 		FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */; };
-		FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* ViewController.swift */; };
+		FDF1DB5E1E7A795B006FF017 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF1DB5D1E7A795B006FF017 /* PriceViewController.swift */; };
 		FDF1DB611E7A795B006FF017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB5F1E7A795B006FF017 /* Main.storyboard */; };
 		FDF1DB631E7A795B006FF017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB621E7A795B006FF017 /* Assets.xcassets */; };
 		FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF1DB641E7A795B006FF017 /* LaunchScreen.storyboard */; };
@@ -89,6 +96,7 @@
 			files = (
 				FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */,
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
+				FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +123,10 @@
 		FD15C971205A32FA00EAAC86 /* InfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoResponse.swift; sourceTree = "<group>"; };
 		FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableAlamofire.framework; path = Carthage/Build/iOS/CodableAlamofire.framework; sourceTree = "<group>"; };
 		FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableAlamofire.framework; path = Carthage/Build/iOS/CodableAlamofire.framework; sourceTree = "<group>"; };
+		FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
+		FD3CF0B520D8D004003BF201 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
+		FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
@@ -122,7 +134,7 @@
 		FDC258172059886500498883 /* YLColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YLColor.swift; sourceTree = "<group>"; };
 		FDF1DB581E7A795B006FF017 /* BTCE Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTCE Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF1DB5B1E7A795B006FF017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FDF1DB5D1E7A795B006FF017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDF1DB5D1E7A795B006FF017 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		FDF1DB601E7A795B006FF017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDF1DB621E7A795B006FF017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDF1DB651E7A795B006FF017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,8 +162,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */,
 				FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
+				FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +220,7 @@
 		FD15C964205A250100EAAC86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FD3CF0C020D8F439003BF201 /* Account */,
 				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
 				FD14A218205AB2A500C992D6 /* Details */,
 				FD15C965205A25ED00EAAC86 /* Home */,
@@ -218,10 +233,17 @@
 		FD15C965205A25ED00EAAC86 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				FDF1DB5D1E7A795B006FF017 /* ViewController.swift */,
+				FDF1DB5D1E7A795B006FF017 /* PriceViewController.swift */,
 				FD15C967205A291200EAAC86 /* PairListAdapter.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		FD3CF0C020D8F439003BF201 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
@@ -237,6 +259,7 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */,
 				FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */,
 				FDF1DB5A1E7A795B006FF017 /* BTCE Widget */,
 				FD01C5AE1E7BC9BB00B1DDCD /* BTCE Price Widget */,
@@ -279,6 +302,7 @@
 				FDF454511E7AE3C50020D551 /* TickerResponse.swift */,
 				FD15C96F205A326800EAAC86 /* PairInfo.swift */,
 				FD15C971205A32FA00EAAC86 /* InfoResponse.swift */,
+				FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -291,6 +315,7 @@
 				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
 				FDC258172059886500498883 /* YLColor.swift */,
 				FD15C969205A295500EAAC86 /* Utils.swift */,
+				FD3CF0B520D8D004003BF201 /* Constants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -298,6 +323,7 @@
 		FDF454411E7ADED60020D551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */,
 				FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */,
 				FDF454421E7ADED70020D551 /* Alamofire.framework */,
 				FD01C5AC1E7BC9BB00B1DDCD /* NotificationCenter.framework */,
@@ -353,7 +379,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Long Vu";
 				TargetAttributes = {
 					FD01C5AA1E7BC9BB00B1DDCD = {
@@ -429,8 +455,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CodableAlamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftEventBus.framework",
 			);
 			outputPaths = (
 			);
@@ -452,10 +478,12 @@
 				FDC258152059882700498883 /* SGModel.swift in Sources */,
 				FD15C96D205A2D1800EAAC86 /* PairCell.swift in Sources */,
 				FD15C978205A551300EAAC86 /* InfoResponse.swift in Sources */,
+				FD3CF0B720D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */,
 				FD15C96C205A2CD700EAAC86 /* PairListAdapter.swift in Sources */,
 				FD01C5C11E7BCC5A00B1DDCD /* Currency.swift in Sources */,
 				FD01C5C21E7BCC5A00B1DDCD /* Pair.swift in Sources */,
+				FD3CF0BD20D8D7D8003BF201 /* OrderBook.swift in Sources */,
 				FDC258142059882400498883 /* SGAdapter.swift in Sources */,
 				FD01C5C31E7BCC5A00B1DDCD /* TickerResponse.swift in Sources */,
 				FD01C5B01E7BC9BB00B1DDCD /* TodayViewController.swift in Sources */,
@@ -478,9 +506,11 @@
 				FDF1DB701E7A79A2006FF017 /* Currency.swift in Sources */,
 				FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */,
 				FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */,
+				FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */,
+				FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,
 				FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */,
-				FDF1DB5E1E7A795B006FF017 /* ViewController.swift in Sources */,
+				FDF1DB5E1E7A795B006FF017 /* PriceViewController.swift in Sources */,
 				FD01C5A21E7B917C00B1DDCD /* PairCell.swift in Sources */,
 				FDF1DB5C1E7A795B006FF017 /* AppDelegate.swift in Sources */,
 				FDC258112059881E00498883 /* SGAdapter.swift in Sources */,
@@ -579,6 +609,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -586,6 +617,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -636,6 +668,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -643,6 +676,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

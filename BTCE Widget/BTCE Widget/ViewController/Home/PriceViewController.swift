@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import AlamofireObjectMapper
+import SwiftEventBus
 import Alamofire
-import ObjectMapper
 
-class ViewController: UIViewController {
+class PriceViewController: UIViewController {
     
     let CODE_KEY = Currency.Codes.CODES_KEY
     
@@ -38,11 +37,26 @@ class ViewController: UIViewController {
         updatePrices()
         getPairsInfo()
         
+        
+       
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        SwiftEventBus.onMainThread(self, name:Constants.KEY_CLICK_CELL) { result in
+            let code = result?.object as? String
+            if code != nil {
+                print(code!)
+                Router.openDetails(fromVC: self, pair: code!)
+            }
+        }
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        SwiftEventBus.unregister(self)
     }
     
     func getPairsInfo(){

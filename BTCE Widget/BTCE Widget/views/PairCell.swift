@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftEventBus
 
 class PairCell:UITableViewCell{
     
@@ -57,5 +58,8 @@ class PairCellModel:SGModel{
             c.setPair(pair)
             c.setPairCode(code)
         }
+    }
+    override func didSelect(index: Int) {
+        SwiftEventBus.post(Constants.KEY_CLICK_CELL, sender: code)
     }
 }

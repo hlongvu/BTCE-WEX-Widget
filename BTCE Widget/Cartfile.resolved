@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" "4.7.0"
 github "Otbivnoe/CodableAlamofire" "1.1.0"
+github "cesarferreira/SwiftEventBus" "3.0.0"

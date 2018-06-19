@@ -54,8 +54,23 @@ class ApiHelper{
             let availablePairs = response.value?.pairs.filter{ ($0.value.hidden ?? 1) == 0 }
             completion ( Array( availablePairs!.keys ) )
         }
-        
-        
     }
+    
+    static func getDepth(pair:String,limit:Int,  completion: @escaping (OrderBook?) -> Void){
+        let URL = API_HOST + "/depth/" + pair + "?limit=" + limit.description
+        Alamofire.request(URL).responseString(){
+            data in
+            let rs = data.result.value
+            if (rs != nil){
+                let jsonData = rs!.data(using: .utf8)!
+                let decoder = JSONDecoder()
+                let dict =  try? decoder.decode([String:OrderBook].self, from: jsonData)
+                completion(dict?[pair])
+            }else{
+                completion(nil)
+            }
+        }
+    }
+    
     
 }

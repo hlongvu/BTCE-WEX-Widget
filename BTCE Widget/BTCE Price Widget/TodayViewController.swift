@@ -8,9 +8,9 @@
 
 import UIKit
 import NotificationCenter
-import AlamofireObjectMapper
+//import AlamofireObjectMapper
 import Alamofire
-import ObjectMapper
+//import ObjectMapper
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var tableView: UITableView!
