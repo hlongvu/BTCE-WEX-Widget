@@ -25,4 +25,21 @@ class TInfoResponse: Codable {
     var success: Int?
     var error:String?
     var result:TInfo?
+    
+    private enum CodingKeys: String, CodingKey {
+        case success
+        case error
+        case result = "return"
+    }
+  
+    required init(from decoder:Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.success = try values.decode(Int?.self, forKey: .success)
+        if values.contains(.result){
+            self.result = try values.decode(TInfo?.self, forKey: .result)
+        }
+        if values.contains(.error){
+            self.error = try values.decode(String?.self, forKey: .error)
+        }
+    }
 }

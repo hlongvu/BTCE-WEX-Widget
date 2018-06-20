@@ -44,6 +44,6 @@ class WexKey: Codable {
     }
     
     func signData(data:String) -> String{
-        return HMAC.sign(message: data, algorithm: .sha256, key: self.secretKey)!
+        return HMAC.sign(message: data, algorithm: .sha512, key: self.secretKey)!
     }
 }
