@@ -18,7 +18,7 @@ class TInfo : Codable{
     var rights: KeyRight?
     var transaction_count : Int = 0
     var open_orders :Int = 0
-    var server_time : Double = 1342123547
+    var server_time : Double = 0
 }
 
 class TInfoResponse: Codable {

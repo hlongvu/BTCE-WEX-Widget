@@ -70,6 +70,7 @@ Notice: This app doesn't tamper with your order or funds. Only get api key with 
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="apiText" destination="vmw-bW-dbD" id="6Nh-El-byf"/>
+                <outlet property="saveBtn" destination="cNp-kS-IqX" id="nc5-tw-kbE"/>
                 <outlet property="secretText" destination="sLT-Zn-C8B" id="ymz-Wg-ktP"/>
             </connections>
             <point key="canvasLocation" x="70.5" y="-95.5"/>

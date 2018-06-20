@@ -14,6 +14,11 @@ class Utils {
         tableView.register(cellNib, forCellReuseIdentifier: name)
     }
     
+    static func registerCLCell(_ collectionView :UICollectionView ,name:String){
+        let cellNib = UINib.init(nibName: name, bundle: nil)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: name)
+    }
+    
     static func calculateInitialNonce()->Int{
         let dataFormat = DateFormatter()
         dataFormat.dateFormat = "yyyy-MM-dd HH:mm:ss xxxx"

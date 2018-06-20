@@ -31,12 +31,13 @@ class SGAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return modelList?.count ?? 0
     }
-    
+   /*
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return modelList?[indexPath.row].getHeight() ?? 0
         
     }
+    */
     
 //    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
 //        return modelList![indexPath.row].canEditRow() ||  modelList![indexPath.row].canDeleteRow()
@@ -99,10 +100,16 @@ class SGAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func setUp(_ tv:UITableView){
         self.tableView = tv
+        
+        
+        self.tableView?.rowHeight = UITableViewAutomaticDimension
+        self.tableView?.estimatedRowHeight = 140
+        
         registerNib(tableView: tableView!)
         buildModels()
         self.tableView?.dataSource = self
         self.tableView?.delegate = self
+        
     }
     
     func reBuildModelsAndReloadTable(){

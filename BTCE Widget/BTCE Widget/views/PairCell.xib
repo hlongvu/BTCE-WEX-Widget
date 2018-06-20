@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PairCell" customModule="BTCE_Widget" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="453" height="69"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PairCell" customModule="BTCE_Price_Widget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="453" height="75"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-vW-yqV">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeK-vW-yqV">
                     <rect key="frame" x="5" y="10" width="46.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRICE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-zE-tBw">
-                    <rect key="frame" x="5" y="36" width="72.5" height="30"/>
+                    <rect key="frame" x="5" y="36" width="72" height="29"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -40,6 +40,7 @@
             <constraints>
                 <constraint firstItem="qeK-vW-yqV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="9iE-4B-C7k"/>
                 <constraint firstItem="mOY-K4-kOd" firstAttribute="top" secondItem="JRU-vl-M4w" secondAttribute="bottom" constant="5" id="CEu-6G-KBp"/>
+                <constraint firstAttribute="bottom" secondItem="2dS-zE-tBw" secondAttribute="bottom" constant="10" id="L2L-2X-lzV"/>
                 <constraint firstItem="2dS-zE-tBw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="MWT-2G-bb0"/>
                 <constraint firstAttribute="trailing" secondItem="mOY-K4-kOd" secondAttribute="trailing" constant="5" id="cox-qf-hfy"/>
                 <constraint firstItem="JRU-vl-M4w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="eGL-Xd-1ei"/>
@@ -55,7 +56,7 @@
                 <outlet property="low" destination="mOY-K4-kOd" id="8GF-3k-Hem"/>
                 <outlet property="price" destination="2dS-zE-tBw" id="9iE-mL-48g"/>
             </connections>
-            <point key="canvasLocation" x="72.5" y="-244.5"/>
+            <point key="canvasLocation" x="72.5" y="-241.5"/>
         </view>
     </objects>
 </document>

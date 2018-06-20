@@ -10,27 +10,44 @@ import Foundation
 import UIKit
 import SwiftEventBus
 
-class AccountViewController: UITableViewController {
+class AccountViewController: UIViewController {
     var adapter : AccountAdapter?
+    var tInfo: TInfo?
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableFooterView = UIView() 
+        
         adapter = AccountAdapter()
         adapter?.wexKey = WexKey.getSaved()
-        adapter?.isLoading  = false
         
-        adapter?.setUp(self.tableView)
+        
+        
         
         let wexKey = WexKey.getSaved()
         if wexKey != nil{
             print("have key")
             print(wexKey?.apiKey)
             print(wexKey?.secretKey)
+            adapter?.isLoading  = true
+            
+            TApiHelper.getTInfo(){
+                res in
+                    self.tInfo = res?.result
+                    self.updateAdapter()
+                    
+            }
+        }else{
+            adapter?.isLoading  = false
         }
-        
-        TApiHelper.getTInfo()
-        
+        adapter?.setUp(self.collectionView)
+    }
+    
+    func updateAdapter(){
+        print("Update Adapter")
+        adapter?.tInfo = self.tInfo
+         adapter?.isLoading  = false
+        adapter?.reBuildModelsAndReloadTable()
     }
     
     override func viewDidAppear(_ animated: Bool) {

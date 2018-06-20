@@ -53,7 +53,7 @@ class TApiHelper{
         
     }
     
-    static func getTInfo(){
+    static func getTInfo(callback: @escaping (TInfoResponse?) -> Void){
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         
@@ -67,9 +67,7 @@ class TApiHelper{
                 .responseDecodableObject(decoder: decoder){
                     (response: DataResponse<TInfoResponse>) in
                     let res = response.value
-                    
-                    print(res?.success)
-                    print(res?.result?.funds)
+                    callback(res)
             }
         
         }

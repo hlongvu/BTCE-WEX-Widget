@@ -3,3 +3,5 @@ github "Otbivnoe/CodableAlamofire"
 github "cesarferreira/SwiftEventBus" == 3.0.0
 github "soffes/Crypto"
 github "soffes/CommonCrypto"
+github "eddiekaiger/SwiftyAttributes"
+

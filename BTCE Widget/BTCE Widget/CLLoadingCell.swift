@@ -8,17 +8,17 @@
 
 import Foundation
 import UIKit
-class LoadingCell: UITableViewCell {
+class CLLoadingCell: UICollectionViewCell {
     
 }
 
-class LoadingCellModel: SGModel {
-    override func getHeight() -> CGFloat {
+class CLLoadingCellModel: CLModel {
+    override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
         return 100
     }
     
     override func nibName() -> String {
-        return LoadingCell.typeName
+        return CLLoadingCell.typeName
     }
     
 }

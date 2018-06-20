@@ -47,25 +47,6 @@
             </objects>
             <point key="canvasLocation" x="732" y="140"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Lhy-TI-4Wo">
-            <objects>
-                <tableViewController id="6AI-cA-UeU" customClass="AccountViewController" customModule="BTCE_Widget" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TAY-2Q-SB3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="6AI-cA-UeU" id="mdJ-2R-Dn9"/>
-                            <outlet property="delegate" destination="6AI-cA-UeU" id="oFa-kA-771"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mKD-Ig-Pcy"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CDl-p0-p9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="732" y="-843"/>
-        </scene>
         <!--Account-->
         <scene sceneID="YjV-Vu-hHf">
             <objects>
@@ -76,12 +57,50 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="6AI-cA-UeU" kind="relationship" relationship="rootViewController" id="YlJ-Hg-3Rn"/>
+                        <segue destination="GBa-Mv-ij7" kind="relationship" relationship="rootViewController" id="ira-f1-sRf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQZ-B1-qUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-226" y="-843"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="Osp-IK-nEN">
+            <objects>
+                <viewController id="GBa-Mv-ij7" customClass="AccountViewController" customModule="BTCE_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4o-PT-6LG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LfS-DK-lLD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VoZ-2c-nOx">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LfS-DK-lLD" firstAttribute="leading" secondItem="dt8-5Q-tPd" secondAttribute="leading" id="0fY-ny-rn1"/>
+                            <constraint firstItem="dt8-5Q-tPd" firstAttribute="bottom" secondItem="LfS-DK-lLD" secondAttribute="bottom" id="5Ne-fO-WhG"/>
+                            <constraint firstItem="LfS-DK-lLD" firstAttribute="top" secondItem="dt8-5Q-tPd" secondAttribute="top" id="SH8-ud-wLa"/>
+                            <constraint firstItem="dt8-5Q-tPd" firstAttribute="trailing" secondItem="LfS-DK-lLD" secondAttribute="trailing" id="pvw-fm-f72"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dt8-5Q-tPd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Account" id="ep1-hj-Ndb"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LfS-DK-lLD" id="fB6-vv-5Yj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zey-FH-avH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-843"/>
         </scene>
         <!--Price-->
         <scene sceneID="qjD-ug-ggL">
