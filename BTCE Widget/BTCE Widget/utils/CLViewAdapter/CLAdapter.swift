@@ -42,7 +42,7 @@ class CLAdapter: NSObject, UICollectionViewDataSource, UICollectionViewDelegate,
         let height = m.getHeight(collectionView)
 //        let width = widthPercent * (collectionView.bounds.width)
                 
-        print("size", width, height)
+       // print("size", width, height)
         return CGSize(width: width , height: height)
     }
  

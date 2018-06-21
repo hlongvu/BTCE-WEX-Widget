@@ -51,6 +51,14 @@
 		FD26A28A20DB8EF0003357FD /* SpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD26A28920DB8EF0003357FD /* SpaceCell.xib */; };
 		FD26A28D20DB9A78003357FD /* ActiveOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A28C20DB9A78003357FD /* ActiveOrdersVC.swift */; };
 		FD26A28F20DB9AA6003357FD /* ActiveOrdersVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD26A28E20DB9AA6003357FD /* ActiveOrdersVC.storyboard */; };
+		FD26A29220DBA60D003357FD /* ActiveOrdersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A29120DBA60D003357FD /* ActiveOrdersResponse.swift */; };
+		FD26A29420DBEB96003357FD /* AOAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A29320DBEB96003357FD /* AOAdapter.swift */; };
+		FD26A29720DBF18D003357FD /* TradeHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A29620DBF18D003357FD /* TradeHistoryVC.swift */; };
+		FD26A29B20DBF1B8003357FD /* TradeHistoryVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD26A29A20DBF1B8003357FD /* TradeHistoryVC.storyboard */; };
+		FD26A29E20DBF51B003357FD /* TradeHistoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A29D20DBF51B003357FD /* TradeHistoryResponse.swift */; };
+		FD26A2A020DBF9B0003357FD /* THAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A29F20DBF9B0003357FD /* THAdapter.swift */; };
+		FD26A2A220DBFB44003357FD /* THView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD26A2A120DBFB44003357FD /* THView.swift */; };
+		FD26A2A420DBFB7F003357FD /* THView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD26A2A320DBFB7F003357FD /* THView.xib */; };
 		FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */; };
 		FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0B520D8D004003BF201 /* Constants.swift */; };
@@ -168,6 +176,14 @@
 		FD26A28920DB8EF0003357FD /* SpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceCell.xib; sourceTree = "<group>"; };
 		FD26A28C20DB9A78003357FD /* ActiveOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersVC.swift; sourceTree = "<group>"; };
 		FD26A28E20DB9AA6003357FD /* ActiveOrdersVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActiveOrdersVC.storyboard; sourceTree = "<group>"; };
+		FD26A29120DBA60D003357FD /* ActiveOrdersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrdersResponse.swift; sourceTree = "<group>"; };
+		FD26A29320DBEB96003357FD /* AOAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOAdapter.swift; sourceTree = "<group>"; };
+		FD26A29620DBF18D003357FD /* TradeHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryVC.swift; sourceTree = "<group>"; };
+		FD26A29A20DBF1B8003357FD /* TradeHistoryVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TradeHistoryVC.storyboard; sourceTree = "<group>"; };
+		FD26A29D20DBF51B003357FD /* TradeHistoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryResponse.swift; sourceTree = "<group>"; };
+		FD26A29F20DBF9B0003357FD /* THAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THAdapter.swift; sourceTree = "<group>"; };
+		FD26A2A120DBFB44003357FD /* THView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THView.swift; sourceTree = "<group>"; };
+		FD26A2A320DBFB7F003357FD /* THView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THView.xib; sourceTree = "<group>"; };
 		FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftEventBus.framework; path = Carthage/Build/iOS/SwiftEventBus.framework; sourceTree = "<group>"; };
 		FD3CF0B520D8D004003BF201 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD3CF0BB20D8D7D8003BF201 /* OrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBook.swift; sourceTree = "<group>"; };
@@ -234,8 +250,6 @@
 		FD01C5A01E7B916100B1DDCD /* views */ = {
 			isa = PBXGroup;
 			children = (
-				FD24DD0020DA2B19000AE6DD /* TextCell.swift */,
-				FD24DD0220DA2B39000AE6DD /* TextCell.xib */,
 				FD01C5A11E7B917C00B1DDCD /* PairCell.swift */,
 				FD01C5A31E7B918B00B1DDCD /* PairCell.xib */,
 				FD3CF0CF20D90383003BF201 /* CLLoadingCell.swift */,
@@ -283,6 +297,7 @@
 		FD15C964205A250100EAAC86 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FD26A29520DBF122003357FD /* TradeHistory */,
 				FD26A28B20DB9A68003357FD /* ActiveOrders */,
 				FD3CF0C020D8F439003BF201 /* Account */,
 				FDF1DB5F1E7A795B006FF017 /* Main.storyboard */,
@@ -316,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				FD26A29020DBA002003357FD /* views */,
+				FD26A29320DBEB96003357FD /* AOAdapter.swift */,
 				FD26A28C20DB9A78003357FD /* ActiveOrdersVC.swift */,
 				FD26A28E20DB9AA6003357FD /* ActiveOrdersVC.storyboard */,
 			);
@@ -325,6 +341,28 @@
 		FD26A29020DBA002003357FD /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FD24DD0020DA2B19000AE6DD /* TextCell.swift */,
+				FD24DD0220DA2B39000AE6DD /* TextCell.xib */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FD26A29520DBF122003357FD /* TradeHistory */ = {
+			isa = PBXGroup;
+			children = (
+				FD26A29C20DBF398003357FD /* views */,
+				FD26A29620DBF18D003357FD /* TradeHistoryVC.swift */,
+				FD26A29A20DBF1B8003357FD /* TradeHistoryVC.storyboard */,
+				FD26A29F20DBF9B0003357FD /* THAdapter.swift */,
+			);
+			path = TradeHistory;
+			sourceTree = "<group>";
+		};
+		FD26A29C20DBF398003357FD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FD26A2A120DBFB44003357FD /* THView.swift */,
+				FD26A2A320DBFB7F003357FD /* THView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -367,6 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				FD3CF0D720D93542003BF201 /* TInfoResponse.swift */,
+				FD26A29120DBA60D003357FD /* ActiveOrdersResponse.swift */,
+				FD26A29D20DBF51B003357FD /* TradeHistoryResponse.swift */,
 			);
 			path = tapi;
 			sourceTree = "<group>";
@@ -448,8 +488,8 @@
 		FDF1DB721E7A79EF006FF017 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				FD24DD0720DA4E0C000AE6DD /* CLViewAdapter */,
 				FD14A219205AB2E800C992D6 /* Router.swift */,
+				FD24DD0720DA4E0C000AE6DD /* CLViewAdapter */,
 				FDC2580D2059881E00498883 /* SGViewAdapter */,
 				FDF1DB731E7A79EF006FF017 /* String+Extensions.swift */,
 				FDC258172059886500498883 /* YLColor.swift */,
@@ -577,10 +617,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD3CF0D220D90426003BF201 /* CLLoadingCell.xib in Resources */,
+				FD26A29B20DBF1B8003357FD /* TradeHistoryVC.storyboard in Resources */,
 				FD14A21E205AB32800C992D6 /* DetailVC.storyboard in Resources */,
 				FD24DD0F20DA57CA000AE6DD /* FundCell.xib in Resources */,
 				FD24DD0320DA2B39000AE6DD /* TextCell.xib in Resources */,
 				FD26A28F20DB9AA6003357FD /* ActiveOrdersVC.storyboard in Resources */,
+				FD26A2A420DBFB7F003357FD /* THView.xib in Resources */,
 				FDF1DB661E7A795B006FF017 /* LaunchScreen.storyboard in Resources */,
 				FD24DD1120DA66FD000AE6DD /* AccountButton.xib in Resources */,
 				FD01C5A41E7B918B00B1DDCD /* PairCell.xib in Resources */,
@@ -643,15 +685,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD26A2A220DBFB44003357FD /* THView.swift in Sources */,
+				FD26A2A020DBF9B0003357FD /* THAdapter.swift in Sources */,
 				FD26A28820DB8ECC003357FD /* SpaceCell.swift in Sources */,
 				FD24DD0920DA4E20000AE6DD /* CLModel.swift in Sources */,
 				FDF454501E7ADF480020D551 /* ApiHelper.swift in Sources */,
 				FDF1DB741E7A79EF006FF017 /* String+Extensions.swift in Sources */,
 				FD15C968205A291200EAAC86 /* PairListAdapter.swift in Sources */,
 				FD3CF0C520D8F56D003BF201 /* AccountAdapter.swift in Sources */,
+				FD26A29E20DBF51B003357FD /* TradeHistoryResponse.swift in Sources */,
 				FD01C5A61E7BAAE500B1DDCD /* ChooseTradePairVC.swift in Sources */,
 				FDF454521E7AE3C50020D551 /* TickerResponse.swift in Sources */,
 				FD14A21C205AB31C00C992D6 /* DetailVC.swift in Sources */,
+				FD26A29220DBA60D003357FD /* ActiveOrdersResponse.swift in Sources */,
 				FDC258182059886500498883 /* YLColor.swift in Sources */,
 				FD24DD1320DA6726000AE6DD /* AccountButton.swift in Sources */,
 				FD14A21A205AB2E800C992D6 /* Router.swift in Sources */,
@@ -659,6 +705,8 @@
 				FD15C970205A326800EAAC86 /* PairInfo.swift in Sources */,
 				FD15C972205A32FA00EAAC86 /* InfoResponse.swift in Sources */,
 				FD3CF0BC20D8D7D8003BF201 /* OrderBook.swift in Sources */,
+				FD26A29420DBEB96003357FD /* AOAdapter.swift in Sources */,
+				FD26A29720DBF18D003357FD /* TradeHistoryVC.swift in Sources */,
 				FD3CF0E420D94746003BF201 /* TApiHelper.swift in Sources */,
 				FD3CF0B620D8D004003BF201 /* Constants.swift in Sources */,
 				FD15C96A205A295500EAAC86 /* Utils.swift in Sources */,

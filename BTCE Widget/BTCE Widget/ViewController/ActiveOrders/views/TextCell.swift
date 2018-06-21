@@ -8,46 +8,49 @@
 
 import Foundation
 import UIKit
-class TextCell : UITableViewCell {
+class TextCell : UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     
 }
 
-class TextCellModel: SGModel {
+class TextCellModel: CLModel {
     var text:String = ""
     init(_ text:String) {
         self.text = text
+    }
+    override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
+        return 50
     }
     
     override func nibName() -> String {
         return TextCell.typeName
     }
     
-    override func fillData(cell: UITableViewCell) {
+    override func fillData(cell: UICollectionViewCell) {
         super.fillData(cell: cell)
-        //        cell.backgroundColor = UIColor.white
-        //        cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0);
         if let c = cell as? TextCell{
            c.label.text = self.text
         }
     }
 }
 
-class TextAttrCellModel: SGModel {
+class TextAttrCellModel: CLModel {
     var text : NSAttributedString?
    
     init(_ text:NSAttributedString?) {
         self.text = text
     }
     
+    override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
+        return 50
+    }
+    
     override func nibName() -> String {
         return TextCell.typeName
     }
     
-    override func fillData(cell: UITableViewCell) {
+    override func fillData(cell: UICollectionViewCell) {
         super.fillData(cell: cell)
-        //        cell.backgroundColor = UIColor.white
-        //        cell.separatorInset = UIEdgeInsetsMake(0, 1000, 0, 0);
         if let c = cell as? TextCell{
             c.label.attributedText = self.text
         }

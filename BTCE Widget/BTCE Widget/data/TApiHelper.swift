@@ -69,9 +69,52 @@ class TApiHelper{
                     let res = response.value
                     callback(res)
             }
-        
         }
-        
     }
+    
+    static func getActiveOrders(callback : @escaping (ActiveOrdersResponse?) -> Void){
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        
+        let parameters : [String:String] = [
+            "method":"ActiveOrders"
+        ]
+        
+        let rq = getRequest(parameters)
+        if (rq != nil){
+            Alamofire.request(rq!)
+                .responseDecodableObject(decoder: decoder){
+                    (response: DataResponse<ActiveOrdersResponse>) in
+                    let res = response.value
+//                    print(res?.success)
+//                    print(res?.error)
+//                    print(res?.result)
+                    callback(res)
+            }
+        }
+    }
+    
+    
+    static func getTradeHistory(callback : @escaping (TradeHistoryResponse?) -> Void){
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        
+        let parameters : [String:String] = [
+            "method":"TradeHistory",
+            "pair":"btc_usd"
+        ]
+        
+        let rq = getRequest(parameters)
+        if (rq != nil){
+            Alamofire.request(rq!)
+                .responseDecodableObject(decoder: decoder){
+                    (response: DataResponse<TradeHistoryResponse>) in
+                    let res = response.value                 
+                    callback(res)
+            }
+        }
+    }
+    
+    
 }
     

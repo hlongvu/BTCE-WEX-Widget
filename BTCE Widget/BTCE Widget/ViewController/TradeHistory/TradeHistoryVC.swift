@@ -1,5 +1,5 @@
 //
-//  ActiveOrdersVC.swift
+//  TradeHistoryVC.swift
 //  BTCE Widget
 //
 //  Created by long on 6/21/18.
@@ -8,26 +8,24 @@
 
 import Foundation
 import UIKit
-class ActiveOrdersVC: UIViewController {
+class TradeHistoryVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var adapter: AOAdapter?
+    var adapter:THAdapter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        adapter = AOAdapter()
+        adapter = THAdapter()
         adapter?.isLoading = true
         adapter?.setUp(self.collectionView)
         
-        
-        TApiHelper.getActiveOrders(){
+        TApiHelper.getTradeHistory(){
             result in
                 self.adapter?.isLoading = false
                 self.adapter?.error = result?.error ?? ""
-                self.adapter?.activeOrders = result?.result
+                self.adapter?.tradeHistory = result?.result
                 self.adapter?.reBuildModelsAndReloadTable()
-        }
-    }   
-    
+        }                
+        
+    }
 }

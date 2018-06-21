@@ -26,4 +26,9 @@ class Router {
         let activeOrdersVC: ActiveOrdersVC = getViewController()
         fromVC.navigationController?.pushViewController(activeOrdersVC, animated: true)
     }
+    
+    static func openTradeHistory(fromVC:UIViewController){
+        let vc: TradeHistoryVC = getViewController()
+        fromVC.navigationController?.pushViewController(vc, animated: true)
+    }
 }

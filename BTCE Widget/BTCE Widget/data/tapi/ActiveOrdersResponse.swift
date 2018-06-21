@@ -1,44 +1,40 @@
 //
-//  TInfoResponse.swift
+//  ActiveOrdersResponse.swift
 //  BTCE Widget
 //
-//  Created by long on 6/19/18.
+//  Created by long on 6/21/18.
 //  Copyright © 2018 Long Vu. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
-class KeyRight: Codable{
-    var info:Int = 0
-    var trade: Int = 0
-    var withdraw: Int = 0
-}
-class TInfo : Codable{
-    var funds : [String:Double] = [:]
-    var rights: KeyRight?
-    var transaction_count : Int = 0
-    var open_orders :Int = 0
-    var server_time : Double = 0
+class AOrder:Codable{
+    var pair:String = ""
+    var type:String = ""
+    var amount:Double = 0
+    var rate:Double = 0
+    var timestamp_created: Double = 0
 }
 
-class TInfoResponse: Codable {
+class ActiveOrdersResponse : Codable {
     var success: Int?
     var error:String?
-    var result:TInfo?
+    var result:[String:AOrder]?
     
     private enum CodingKeys: String, CodingKey {
         case success
         case error
         case result = "return"
     }
-  
+    
     required init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         self.success = try values.decode(Int?.self, forKey: .success)
+       
         if values.contains(.result){
-            self.result = try values.decode(TInfo?.self, forKey: .result)
+            self.result = try values.decode([String:AOrder]?.self, forKey: .result)
         }
+        
         if values.contains(.error){
             self.error = try values.decode(String?.self, forKey: .error)
         }

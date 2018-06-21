@@ -46,4 +46,8 @@ class WexKey: Codable {
     func signData(data:String) -> String{
         return HMAC.sign(message: data, algorithm: .sha512, key: self.secretKey)!
     }
+    
+    static func removeKeys(){
+         UserDefaults.standard.removeObject(forKey: Constants.KEY_SAVE_WEXKEY)
+    }
 }

@@ -19,12 +19,13 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         adapter = AccountAdapter()
-        adapter?.wexKey = WexKey.getSaved()
-        
-        
-        
-        
+        loadDataFromKey()
+        adapter?.setUp(self.collectionView)
+    }
+    
+    func loadDataFromKey(){
         let wexKey = WexKey.getSaved()
+        adapter?.wexKey = wexKey
         if wexKey != nil{
             print("have key")
             print(wexKey?.apiKey)
@@ -33,14 +34,14 @@ class AccountViewController: UIViewController {
             
             TApiHelper.getTInfo(){
                 res in
+                    self.adapter?.isLoading  = false
                     self.tInfo = res?.result
                     self.updateAdapter()
-                    
+                
             }
         }else{
             adapter?.isLoading  = false
         }
-        adapter?.setUp(self.collectionView)
     }
     
     func updateAdapter(){
@@ -57,6 +58,7 @@ class AccountViewController: UIViewController {
             if key != nil {
                 print("save")
                 key?.save()
+                self.loadDataFromKey()
             }
         }
         
@@ -67,6 +69,7 @@ class AccountViewController: UIViewController {
         
         SwiftEventBus.onMainThread(self, name:Constants.ACTION_VIEW_TRADE_HISTORY) { result in
             print("view trade history")
+            Router.openTradeHistory(fromVC: self)
         }
     }
     
@@ -99,6 +102,9 @@ class AccountViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.default, handler: {
                 action in
                     print("Delete")
+                    WexKey.removeKeys()
+                    self.adapter?.wexKey = nil
+                    self.adapter?.reBuildModelsAndReloadTable()
             
             }))
         
