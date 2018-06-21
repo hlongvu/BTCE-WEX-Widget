@@ -36,8 +36,8 @@ class FundCellModel: CLModel {
         super.fillData(cell: cell)
         
         if let c = cell as? FundCell{
-            c.titleText.text = self.label
-            c.valueText.text = String(describing: self.value!)
+            c.titleText.text = self.label?.uppercased()
+            c.valueText.text = String(format:"%.8f", self.value!)
         }
     }
 }

@@ -21,6 +21,7 @@ class AccountAdapter: CLAdapter {
         Utils.registerCLCell(cl, name: NoAPIKeyCell.typeName)
         Utils.registerCLCell(cl, name: FundCell.typeName)
         Utils.registerCLCell(cl, name: AccountButton.typeName)
+        Utils.registerCLCell(cl, name: SpaceCell.typeName)
     }
     
     override func buildModels() {
@@ -37,15 +38,14 @@ class AccountAdapter: CLAdapter {
         
         if ( tInfo != nil){
             for (k,v) in tInfo!.funds{
-//                let fund = k.uppercased().withFont(.systemFont(ofSize: 18)) + String(describing: v).withFont(.systemFont(ofSize: 18)).withTextColor(UIColor.red)
                 if v > 0.0 {
                     addModel(FundCellModel(k, v))
                 }
             }
         
-            
-            addModel(AccountButtonModel())
-            addModel(AccountButtonModel())
+            addModel(SpaceCellModel(height: 20))
+            addModel(AccountButtonModel(Constants.ACTION_VIEW_ACTIVE_ORDERS, "Active Orders"))
+            addModel(AccountButtonModel(Constants.ACTION_VIEW_TRADE_HISTORY, "Trade History"))
         
         }
         

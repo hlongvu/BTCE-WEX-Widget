@@ -8,16 +8,30 @@
 
 import Foundation
 import UIKit
+import SwiftEventBus
 class AccountButton : UICollectionViewCell {
+    var delegate: AccountButtonDelegate?
     @IBOutlet weak var btn: UIButton!
     
+    @IBAction func clickBtn(_ sender: Any) {
+        delegate?.clickButton()
+    }
 }
 
-class AccountButtonModel:CLModel{
+protocol AccountButtonDelegate {
+    func clickButton()
+}
+
+class AccountButtonModel:CLModel, AccountButtonDelegate{
+    var action:String
+    var label:String
     
-    override func getWidth(_ collectionView: UICollectionView) -> CGFloat {
-        return collectionView.bounds.width
+    init(_ action:String,_ label:String) {
+        self.action = action
+        self.label = label
     }
+
+    
     override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
         return 50
     }
@@ -25,13 +39,17 @@ class AccountButtonModel:CLModel{
     override func nibName() -> String {
         return AccountButton.typeName
     }
-//
-//    override func fillData(cell: UICollectionViewCell) {
-//        super.fillData(cell: cell)
-//
-//        if let c = cell as? FundCell{
-//            c.titleText.text = self.label
-//            c.valueText.text = String(describing: self.value!)
-//        }
-//    }
+
+    override func fillData(cell: UICollectionViewCell) {
+        super.fillData(cell: cell)
+
+        if let c = cell as? AccountButton{
+            c.btn.setTitle(self.label, for: .normal)
+            c.delegate = self
+        }
+    }
+    
+    func clickButton(){
+        SwiftEventBus.post(self.action)
+    }
 }

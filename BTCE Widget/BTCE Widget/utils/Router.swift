@@ -22,4 +22,8 @@ class Router {
         fromVC.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    static func openActiveOrders(fromVC:UIViewController){
+        let activeOrdersVC: ActiveOrdersVC = getViewController()
+        fromVC.navigationController?.pushViewController(activeOrdersVC, animated: true)
+    }
 }

@@ -17,4 +17,8 @@ class Constants {
     
     static var KEY_SAVE_WEXKEY = "KEY_SAVE_WEXKEY"
     static var KEY_SAVE_NONCE = "KEY_SAVE_NONCE"
+    
+    
+    static var ACTION_VIEW_ACTIVE_ORDERS = "ACTION_VIEW_ACTIVE_ORDERS"
+    static var ACTION_VIEW_TRADE_HISTORY = "ACTION_VIEW_TRADE_HISTORY"
 }
