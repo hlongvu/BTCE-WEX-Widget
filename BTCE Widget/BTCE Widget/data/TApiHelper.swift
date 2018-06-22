@@ -95,14 +95,18 @@ class TApiHelper{
     }
     
     
-    static func getTradeHistory(callback : @escaping (TradeHistoryResponse?) -> Void){
+    static func getTradeHistory(_ filter:String, callback : @escaping (TradeHistoryResponse?) -> Void){
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         
-        let parameters : [String:String] = [
-            "method":"TradeHistory",
-            "pair":"btc_usd"
+        var parameters : [String:String] = [
+            "method":"TradeHistory"
         ]
+        
+        if !filter.isEmpty && filter != "All"{
+            parameters["pair"] = filter.toTradePairCode()
+        }
+        
         
         let rq = getRequest(parameters)
         if (rq != nil){

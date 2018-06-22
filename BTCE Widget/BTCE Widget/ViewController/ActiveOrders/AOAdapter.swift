@@ -30,7 +30,11 @@ class AOAdapter : CLAdapter {
         
         if error.isEmpty{
             if (self.activeOrders?.count ?? 0 > 0){
-                addModel(TextCellModel("Have Orders"))
+//                addModel(TextCellModel("Have Orders"))                
+                for (_,v) in self.activeOrders!{
+                    addModel(THViewModel(  THViewData(fromAOrder: v)))
+                }
+                
             }else{
                  addModel(TextCellModel("No Orders"))
             }

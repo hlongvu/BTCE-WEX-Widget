@@ -82,6 +82,8 @@
 		FD3CF0E220D94704003BF201 /* WexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CD20D8FE88003BF201 /* WexKey.swift */; };
 		FD3CF0E420D94746003BF201 /* TApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0E320D94746003BF201 /* TApiHelper.swift */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
+		FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; };
+		FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
 		FDC258132059881E00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
@@ -137,6 +139,7 @@
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
 				FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */,
 				FD24DD0620DA3318000AE6DD /* SwiftyAttributes.framework in Embed Frameworks */,
+				FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +203,7 @@
 		FD3CF0DF20D942C9003BF201 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		FD3CF0E320D94746003BF201 /* TApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TApiHelper.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
+		FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSelectionMenu.framework; path = Carthage/Build/iOS/RSSelectionMenu.framework; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
 		FDC258102059881E00498883 /* TypeName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
 				FD3CF0E020D942C9003BF201 /* Crypto.framework in Frameworks */,
 				FD3CF0DC20D942AC003BF201 /* CommonCrypto.framework in Frameworks */,
+				FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */,
 				FD24DD0520DA3318000AE6DD /* SwiftyAttributes.framework in Frameworks */,
 				FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */,
 			);
@@ -422,6 +427,13 @@
 			path = public;
 			sourceTree = "<group>";
 		};
+		FDB11F4020DCDE2D00C90054 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +447,7 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */,
 				FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */,
 				FD3CF0DF20D942C9003BF201 /* Crypto.framework */,
 				FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */,
@@ -460,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				FD01C2FC1E7FE9C20011561D /* BTCE Widget.entitlements */,
+				FDB11F4020DCDE2D00C90054 /* Libs */,
 				FD01C5A01E7B916100B1DDCD /* views */,
 				FDF1DB6D1E7A79A2006FF017 /* data */,
 				FDF1DB721E7A79EF006FF017 /* utils */,

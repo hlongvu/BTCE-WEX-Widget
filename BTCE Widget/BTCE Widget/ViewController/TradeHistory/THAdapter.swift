@@ -13,6 +13,7 @@ class THAdapter : CLAdapter {
     var isLoading: Bool = true
     var tradeHistory: [String:THistory]?
     var error : String = ""
+    var currentFilter : String = "All"
     
     override func registerNib(_ cl: UICollectionView) {
         Utils.registerCLCell(cl, name: CLLoadingCell.typeName)
@@ -33,7 +34,7 @@ class THAdapter : CLAdapter {
             if (self.tradeHistory?.count ?? 0 > 0){
                 for (_,v) in self.tradeHistory!{
 //                    if v.is_your_order == 1{
-                        addModel(THViewModel(v))
+                        addModel(THViewModel(  THViewData(fromTHistory: v)))
 //                    }
                 }
                 

@@ -17,10 +17,34 @@ class THView : UICollectionViewCell {
     
 }
 
+class THViewData{
+    var type:String = ""
+    var pair:String = ""
+    var amount:Double = 0
+    var rate:Double = 0
+    var time:Double = 0
+    
+    init(fromTHistory: THistory) {
+        self.type  = fromTHistory.type
+        self.pair = fromTHistory.pair
+        self.amount = fromTHistory.amount
+        self.rate = fromTHistory.rate
+        self.time = fromTHistory.timestamp
+    }
+    
+    init(fromAOrder: AOrder) {
+        self.type = fromAOrder.type
+        self.pair = fromAOrder.pair
+        self.amount = fromAOrder.amount
+        self.rate = fromAOrder.rate
+        self.time = fromAOrder.timestamp_created
+    }
+}
+
 class THViewModel:CLModel{
-    var tHistory:THistory?
-    init(_ tHistory:THistory) {
-        self.tHistory = tHistory
+    var data:THViewData?
+    init(_ data:THViewData) {
+        self.data = data
     }
     override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
         return 25
@@ -33,23 +57,22 @@ class THViewModel:CLModel{
     override func fillData(cell: UICollectionViewCell) {
         super.fillData(cell: cell)
         if let c = cell as? THView{
-            c.txType.text = self.tHistory?.type
-            if (self.tHistory?.type == "buy"){
+            c.txType.text = self.data?.type
+            if (self.data?.type == "buy"){
                 c.txType.textColor = UIColor.blue
             }else{
                 c.txType.textColor = UIColor.red
             }
             
-            c.txPair.text = self.tHistory?.pair.toTradePairTitle()
-            c.txAmount.text = self.tHistory?.amount.description
-            c.txRate.text = self.tHistory?.rate.description
+            c.txPair.text = self.data?.pair.toTradePairTitle()
+            c.txAmount.text = self.data?.amount.description
+            c.txRate.text = self.data?.rate.description
             
             let dateFormatterGet = DateFormatter()
             dateFormatterGet.dateFormat = "yyyy/MM/dd HH:mm:ss"
-            c.txTime.text = dateFormatterGet.string(from: Date(milliseconds: self.tHistory?.timestamp ?? 0))
+            c.txTime.text = dateFormatterGet.string(from: Date(milliseconds: self.data?.time ?? 0))
             
             
         }
     }
-    
 }
