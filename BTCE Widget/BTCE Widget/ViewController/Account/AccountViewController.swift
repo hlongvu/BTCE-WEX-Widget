@@ -15,12 +15,33 @@ class AccountViewController: UIViewController {
     var tInfo: TInfo?
     @IBOutlet weak var collectionView: UICollectionView!
     
+     private var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+       
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        } else {
+            // Fallback on earlier versions
+            collectionView.addSubview(refreshControl)
+        }
+        
+        self.refreshControl.beginRefreshing()
         
         adapter = AccountAdapter()
         loadDataFromKey()
         adapter?.setUp(self.collectionView)
+    }
+    
+    @objc func refresh(){
+        print("refresh")
+       
+        loadDataFromKey()
+        adapter?.reBuildModelsAndReloadTable()
     }
     
     func loadDataFromKey(){
@@ -30,24 +51,26 @@ class AccountViewController: UIViewController {
             print("have key")
          //   print(wexKey?.apiKey)
          //   print(wexKey?.secretKey)
-            adapter?.isLoading  = true
+         //   adapter?.isLoading  = true
             
             TApiHelper.getTInfo(){
                 res in
-                    self.adapter?.isLoading  = false
+                   // self.adapter?.isLoading  = false
                     self.tInfo = res?.result
                     self.updateAdapter()
-                
             }
         }else{
-            adapter?.isLoading  = false
+           self.updateAdapter()
         }
     }
     
     func updateAdapter(){
         print("Update Adapter")
         adapter?.tInfo = self.tInfo
-         adapter?.isLoading  = false
+       // adapter?.isLoading  = false
+        if (self.refreshControl.isRefreshing){
+            self.refreshControl?.endRefreshing()
+        }
         adapter?.reBuildModelsAndReloadTable()
     }
     

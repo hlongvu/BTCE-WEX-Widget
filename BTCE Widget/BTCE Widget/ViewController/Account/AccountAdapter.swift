@@ -11,7 +11,7 @@ import UIKit
 
 
 class AccountAdapter: CLAdapter {
-    var isLoading: Bool = true
+   // var isLoading: Bool = true
     var wexKey:WexKey?
     var tInfo:TInfo?
     
@@ -25,10 +25,10 @@ class AccountAdapter: CLAdapter {
     
     override func buildModels() {
         clearModels()
-        if (isLoading){
-            addModel(CLLoadingCellModel())
-            return
-        }
+//        if (isLoading){
+//            addModel(CLLoadingCellModel())
+//            return
+//        }
         
         if wexKey == nil{
             addModel(NoAPIKeyCellModel())

@@ -15,7 +15,7 @@ class TApiHelper{
     
     static func getNonce() -> Int{
         let value = UserDefaults.standard.integer(forKey: Constants.KEY_SAVE_NONCE)
-        let nonce =  (value == 0) ? 1 : value
+        let nonce =  (value == 0) ? Utils.calculateInitialNonce() : value
         UserDefaults.standard.set(nonce + 1, forKey: Constants.KEY_SAVE_NONCE)
         return nonce
     }
