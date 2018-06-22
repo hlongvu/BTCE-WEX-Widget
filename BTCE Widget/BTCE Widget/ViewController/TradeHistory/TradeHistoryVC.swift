@@ -58,9 +58,10 @@ class TradeHistoryVC: UIViewController {
     
     @objc func filterClick(){
         var datas :[String] = ["All"]
-        datas.append(contentsOf: Currency.getAllCodes().map{ $0.toTradePairTitle()})
+        datas.append(contentsOf: Currency.getAllCodes().map{ $0.toTradePairTitle()}.sorted())
         
 
+        
         let selectionMenu =  RSSelectionMenu(dataSource: datas) { (cell, object, indexPath) in
             cell.textLabel?.text = object
             cell.tintColor = .orange

@@ -39,8 +39,6 @@
 		FD15C979205A552200EAAC86 /* PairInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD15C96F205A326800EAAC86 /* PairInfo.swift */; };
 		FD24DD0120DA2B19000AE6DD /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24DD0020DA2B19000AE6DD /* TextCell.swift */; };
 		FD24DD0320DA2B39000AE6DD /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD24DD0220DA2B39000AE6DD /* TextCell.xib */; };
-		FD24DD0520DA3318000AE6DD /* SwiftyAttributes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */; };
-		FD24DD0620DA3318000AE6DD /* SwiftyAttributes.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD24DD0920DA4E20000AE6DD /* CLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24DD0820DA4E20000AE6DD /* CLModel.swift */; };
 		FD24DD0B20DA4E3C000AE6DD /* CLAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24DD0A20DA4E3B000AE6DD /* CLAdapter.swift */; };
 		FD24DD0D20DA57AB000AE6DD /* FundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24DD0C20DA57AB000AE6DD /* FundCell.swift */; };
@@ -82,10 +80,12 @@
 		FD3CF0E220D94704003BF201 /* WexKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0CD20D8FE88003BF201 /* WexKey.swift */; };
 		FD3CF0E420D94746003BF201 /* TApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CF0E320D94746003BF201 /* TApiHelper.swift */; };
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
-		FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; };
-		FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDBF579B20DCFEF400384592 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF579A20DCFEF400384592 /* Device.framework */; };
 		FDBF579C20DCFEF400384592 /* Device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF579A20DCFEF400384592 /* Device.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDBF57BC20DD125200384592 /* RSSelectionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF57B120DD0C4800384592 /* RSSelectionMenu.framework */; };
+		FDBF57BD20DD125200384592 /* RSSelectionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF57B120DD0C4800384592 /* RSSelectionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDBF57C820DD14F300384592 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF57C620DD14F200384592 /* Crashlytics.framework */; };
+		FDBF57C920DD14F300384592 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF57C720DD14F300384592 /* Fabric.framework */; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
 		FDC258132059881E00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
@@ -115,6 +115,20 @@
 			remoteGlobalIDString = FD01C5AA1E7BC9BB00B1DDCD;
 			remoteInfo = "BTCE Price Widget";
 		};
+		FDBF57B020DD0C4800384592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBF57AB20DD0C4800384592 /* RSSelectionMenu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D83571071F87986400185B73;
+			remoteInfo = RSSelectionMenu;
+		};
+		FDBF57BE20DD125200384592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDBF57AB20DD0C4800384592 /* RSSelectionMenu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D83571061F87986400185B73;
+			remoteInfo = RSSelectionMenu;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -141,8 +155,7 @@
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
 				FDBF579C20DCFEF400384592 /* Device.framework in Embed Frameworks */,
 				FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */,
-				FD24DD0620DA3318000AE6DD /* SwiftyAttributes.framework in Embed Frameworks */,
-				FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */,
+				FDBF57BD20DD125200384592 /* RSSelectionMenu.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +184,6 @@
 		FD15C975205A35BD00EAAC86 /* CodableAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CodableAlamofire.framework; path = Carthage/Build/iOS/CodableAlamofire.framework; sourceTree = "<group>"; };
 		FD24DD0020DA2B19000AE6DD /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		FD24DD0220DA2B39000AE6DD /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
-		FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyAttributes.framework; path = Carthage/Build/iOS/SwiftyAttributes.framework; sourceTree = "<group>"; };
 		FD24DD0820DA4E20000AE6DD /* CLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLModel.swift; sourceTree = "<group>"; };
 		FD24DD0A20DA4E3B000AE6DD /* CLAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLAdapter.swift; sourceTree = "<group>"; };
 		FD24DD0C20DA57AB000AE6DD /* FundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundCell.swift; sourceTree = "<group>"; };
@@ -206,8 +218,10 @@
 		FD3CF0DF20D942C9003BF201 /* Crypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crypto.framework; path = Carthage/Build/iOS/Crypto.framework; sourceTree = "<group>"; };
 		FD3CF0E320D94746003BF201 /* TApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TApiHelper.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
-		FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSelectionMenu.framework; path = Carthage/Build/iOS/RSSelectionMenu.framework; sourceTree = "<group>"; };
 		FDBF579A20DCFEF400384592 /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
+		FDBF57AB20DD0C4800384592 /* RSSelectionMenu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSelectionMenu.xcodeproj; path = RSSelectionMenu/RSSelectionMenu.xcodeproj; sourceTree = "<group>"; };
+		FDBF57C620DD14F200384592 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Carthage/Build/iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		FDBF57C720DD14F300384592 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Carthage/Build/iOS/Fabric.framework; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
 		FDC258102059881E00498883 /* TypeName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
@@ -242,14 +256,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBF57C820DD14F300384592 /* Crashlytics.framework in Frameworks */,
+				FDBF57C920DD14F300384592 /* Fabric.framework in Frameworks */,
 				FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */,
 				FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
+				FDBF57BC20DD125200384592 /* RSSelectionMenu.framework in Frameworks */,
 				FDBF579B20DCFEF400384592 /* Device.framework in Frameworks */,
 				FD3CF0E020D942C9003BF201 /* Crypto.framework in Frameworks */,
 				FD3CF0DC20D942AC003BF201 /* CommonCrypto.framework in Frameworks */,
-				FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */,
-				FD24DD0520DA3318000AE6DD /* SwiftyAttributes.framework in Frameworks */,
 				FD3CF0B320D8CF86003BF201 /* SwiftEventBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +454,14 @@
 			path = Libs;
 			sourceTree = "<group>";
 		};
+		FDBF57AC20DD0C4800384592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDBF57B120DD0C4800384592 /* RSSelectionMenu.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FDC2580D2059881E00498883 /* SGViewAdapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,9 +475,8 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FDBF57AB20DD0C4800384592 /* RSSelectionMenu.xcodeproj */,
 				FDBF579A20DCFEF400384592 /* Device.framework */,
-				FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */,
-				FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */,
 				FD3CF0DF20D942C9003BF201 /* Crypto.framework */,
 				FD3CF0DB20D942AB003BF201 /* CommonCrypto.framework */,
 				FD3CF0B220D8CF85003BF201 /* SwiftEventBus.framework */,
@@ -522,6 +544,8 @@
 		FDF454411E7ADED60020D551 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDBF57C620DD14F200384592 /* Crashlytics.framework */,
+				FDBF57C720DD14F300384592 /* Fabric.framework */,
 				FD3CF0BE20D8E4D6003BF201 /* WebKit.framework */,
 				FD15C973205A359E00EAAC86 /* CodableAlamofire.framework */,
 				FDF454421E7ADED70020D551 /* Alamofire.framework */,
@@ -560,11 +584,13 @@
 				FDF4544E1E7ADEDD0020D551 /* Embed Frameworks */,
 				FD01C5B71E7BC9BB00B1DDCD /* Embed App Extensions */,
 				FD349A071E822B3E00584218 /* ShellScript */,
+				FDBF57A320DD05F700384592 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				FD01C5B61E7BC9BB00B1DDCD /* PBXTargetDependency */,
+				FDBF57BF20DD125200384592 /* PBXTargetDependency */,
 			);
 			name = "BTCE Widget";
 			productName = "BTCE Widget";
@@ -614,6 +640,12 @@
 			mainGroup = FDF1DB4F1E7A795B006FF017;
 			productRefGroup = FDF1DB591E7A795B006FF017 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FDBF57AC20DD0C4800384592 /* Products */;
+					ProjectRef = FDBF57AB20DD0C4800384592 /* RSSelectionMenu.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FDF1DB571E7A795B006FF017 /* BTCE Widget */,
@@ -621,6 +653,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FDBF57B120DD0C4800384592 /* RSSelectionMenu.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSSelectionMenu.framework;
+			remoteRef = FDBF57B020DD0C4800384592 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FD01C5A91E7BC9BB00B1DDCD /* Resources */ = {
@@ -666,14 +708,27 @@
 				"$(SRCROOT)/Carthage/Build/iOS/CodableAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftEventBus.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RSSelectionMenu.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyAttributes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Crypto.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		FDBF57A320DD05F700384592 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Carthage/Build/iOS/Fabric.framework/run\" 0c4ae5e94ed35af4937ca66d338bc94362d49400 f3b856476a5dabaa0e2eb62f7e5c89f6e7ec3f28c823970622f24af6ba104f58";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -760,6 +815,11 @@
 			isa = PBXTargetDependency;
 			target = FD01C5AA1E7BC9BB00B1DDCD /* BTCE Price Widget */;
 			targetProxy = FD01C5B51E7BC9BB00B1DDCD /* PBXContainerItemProxy */;
+		};
+		FDBF57BF20DD125200384592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSSelectionMenu;
+			targetProxy = FDBF57BE20DD125200384592 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -946,6 +1006,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "BTCE Widget/BTCE Widget.entitlements";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LEGCK68J4H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

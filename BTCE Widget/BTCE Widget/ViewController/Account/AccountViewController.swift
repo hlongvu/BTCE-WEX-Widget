@@ -28,8 +28,8 @@ class AccountViewController: UIViewController {
         adapter?.wexKey = wexKey
         if wexKey != nil{
             print("have key")
-            print(wexKey?.apiKey)
-            print(wexKey?.secretKey)
+         //   print(wexKey?.apiKey)
+         //   print(wexKey?.secretKey)
             adapter?.isLoading  = true
             
             TApiHelper.getTInfo(){

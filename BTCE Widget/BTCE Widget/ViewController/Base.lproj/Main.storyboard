@@ -94,7 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="dt8-5Q-tPd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="ep1-hj-Ndb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="sZb-HT-w4G">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="action" id="sZb-HT-w4G">
                             <connections>
                                 <action selector="menuClick:" destination="GBa-Mv-ij7" id="Mt0-Qb-qba"/>
                             </connections>
