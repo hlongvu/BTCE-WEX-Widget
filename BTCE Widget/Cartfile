@@ -4,4 +4,6 @@ github "cesarferreira/SwiftEventBus" == 3.0.0
 github "soffes/Crypto"
 github "soffes/CommonCrypto"
 github "eddiekaiger/SwiftyAttributes"
+github "Ekhoo/Device" ~> 3.1.0
+
 

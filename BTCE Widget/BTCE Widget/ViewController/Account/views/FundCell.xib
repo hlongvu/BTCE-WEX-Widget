@@ -21,14 +21,14 @@
                     <color key="backgroundColor" red="0.88130804016182462" green="0.88130804016182462" blue="0.88130804016182462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGn-IE-ctI">
-                    <rect key="frame" x="110.5" y="20.5" width="31" height="19.5"/>
+                    <rect key="frame" x="110.5" y="23" width="31" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-Pm-gCZ">
-                    <rect key="frame" x="112.5" y="48" width="27.5" height="24"/>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <rect key="frame" x="115.5" y="50.5" width="22" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>

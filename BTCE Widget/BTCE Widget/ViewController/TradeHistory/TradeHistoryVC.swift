@@ -73,6 +73,9 @@ class TradeHistoryVC: UIViewController {
             }
         }
         
+//        selectionMenu.setNavigationBar(title: "Filter")
+
+        
         selectionMenu.show(style: .Push, from: self)
     }
     

@@ -84,6 +84,8 @@
 		FD9737461E7FBB010058FBA5 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9737451E7FBB010058FBA5 /* OptionsVC.swift */; };
 		FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; };
 		FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FDBF579B20DCFEF400384592 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF579A20DCFEF400384592 /* Device.framework */; };
+		FDBF579C20DCFEF400384592 /* Device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDBF579A20DCFEF400384592 /* Device.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDC258112059881E00498883 /* SGAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580E2059881E00498883 /* SGAdapter.swift */; };
 		FDC258122059881E00498883 /* SGModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC2580F2059881E00498883 /* SGModel.swift */; };
 		FDC258132059881E00498883 /* TypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC258102059881E00498883 /* TypeName.swift */; };
@@ -137,6 +139,7 @@
 				FD3CF0E120D942C9003BF201 /* Crypto.framework in Embed Frameworks */,
 				FD15C977205A35BD00EAAC86 /* CodableAlamofire.framework in Embed Frameworks */,
 				FDF454491E7ADEDD0020D551 /* Alamofire.framework in Embed Frameworks */,
+				FDBF579C20DCFEF400384592 /* Device.framework in Embed Frameworks */,
 				FD3CF0B420D8CF86003BF201 /* SwiftEventBus.framework in Embed Frameworks */,
 				FD24DD0620DA3318000AE6DD /* SwiftyAttributes.framework in Embed Frameworks */,
 				FDB11F4520DCEC3800C90054 /* RSSelectionMenu.framework in Embed Frameworks */,
@@ -204,6 +207,7 @@
 		FD3CF0E320D94746003BF201 /* TApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TApiHelper.swift; sourceTree = "<group>"; };
 		FD9737451E7FBB010058FBA5 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RSSelectionMenu.framework; path = Carthage/Build/iOS/RSSelectionMenu.framework; sourceTree = "<group>"; };
+		FDBF579A20DCFEF400384592 /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Carthage/Build/iOS/Device.framework; sourceTree = "<group>"; };
 		FDC2580E2059881E00498883 /* SGAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAdapter.swift; sourceTree = "<group>"; };
 		FDC2580F2059881E00498883 /* SGModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGModel.swift; sourceTree = "<group>"; };
 		FDC258102059881E00498883 /* TypeName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeName.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 				FD3CF0BF20D8E4D6003BF201 /* WebKit.framework in Frameworks */,
 				FD15C976205A35BD00EAAC86 /* CodableAlamofire.framework in Frameworks */,
 				FDF454481E7ADEDD0020D551 /* Alamofire.framework in Frameworks */,
+				FDBF579B20DCFEF400384592 /* Device.framework in Frameworks */,
 				FD3CF0E020D942C9003BF201 /* Crypto.framework in Frameworks */,
 				FD3CF0DC20D942AC003BF201 /* CommonCrypto.framework in Frameworks */,
 				FDB11F4420DCEC3700C90054 /* RSSelectionMenu.framework in Frameworks */,
@@ -447,6 +452,7 @@
 		FDF1DB4F1E7A795B006FF017 = {
 			isa = PBXGroup;
 			children = (
+				FDBF579A20DCFEF400384592 /* Device.framework */,
 				FDB11F4320DCEC3700C90054 /* RSSelectionMenu.framework */,
 				FD24DD0420DA3318000AE6DD /* SwiftyAttributes.framework */,
 				FD3CF0DF20D942C9003BF201 /* Crypto.framework */,
@@ -659,6 +665,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CodableAlamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftEventBus.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RSSelectionMenu.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyAttributes.framework",
 			);
 			outputPaths = (
 			);

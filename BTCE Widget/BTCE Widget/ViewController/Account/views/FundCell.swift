@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Device
 class FundCell: UICollectionViewCell {
     @IBOutlet weak var titleText: UILabel!
     
@@ -22,7 +23,11 @@ class FundCellModel: CLModel {
     }
     
     override func getWidth(_ collectionView: UICollectionView) -> CGFloat {
-        return 205
+        if (Device.isPhone() || Device.isPod() || Device.isSimulator()){
+            return collectionView.bounds.width / 2 - 10
+        }else{
+            return 205
+        }
     }
     override func getHeight(_ collectionView: UICollectionView) -> CGFloat {
         return 90

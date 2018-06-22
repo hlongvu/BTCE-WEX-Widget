@@ -18,6 +18,7 @@ class AOAdapter : CLAdapter {
         Utils.registerCLCell(cl, name: CLLoadingCell.typeName)
         Utils.registerCLCell(cl, name: SpaceCell.typeName)
         Utils.registerCLCell(cl, name: TextCell.typeName)
+        Utils.registerCLCell(cl, name: THView.typeName)
     }
     
     override func buildModels() {
