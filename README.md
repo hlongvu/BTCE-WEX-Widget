@@ -20,4 +20,5 @@ carthage update --platform iOS
 ### Buy me a coffee
 
 BTC: 13YM6zeDWtyvcVA4GMur1pAiVgjwsS2TFu
+
 ETH: 0xeD33b0e8337B00F7b00A85de8d7Dd589272Ca507
